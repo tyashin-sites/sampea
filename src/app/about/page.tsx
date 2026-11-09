@@ -30,12 +30,6 @@ export default function Page() {
           "Every bottle is 30 ml. Every scent is 40% perfume oil. Those two things will not change from one scent to the next.",
           "Sampéa will launch in India, Canada and the US. Until then, the scents stay private and the door stays open by email."
         ],
-        "image": {
-          "alt": "",
-          "brief": "",
-          "aspect": "landscape"
-        },
-        "imageSide": "right",
         "facts": [
           {
             "label": "Bottle size",

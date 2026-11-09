@@ -4,7 +4,7 @@ import type { ProseProps } from '@/components/kit';
 import { organizationLd, websiteLd, breadcrumbLd } from '@/lib/schema';
 
 export const metadata = pageMetadata({
-  title: "Privacy Policy | Sampéa",
+  title: "Privacy Policy",
   description: "How Sampéa handles the personal information you share when you visit this website or write to us at contact@houseofsampea.com.",
   path: "/privacy",
 });

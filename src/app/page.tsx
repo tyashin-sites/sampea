@@ -4,7 +4,8 @@ import type { CtaBandProps, HeroProps, StatsProps, StoryProps } from '@/componen
 import { organizationLd, websiteLd } from '@/lib/schema';
 
 export const metadata = pageMetadata({
-  title: "Sampéa | Perfume house, launching soon",
+  title: "Sampéa | A perfume house, not yet launched",
+  exactTitle: true,
   description: "Sampéa is a perfume house that has not launched yet. Every bottle is 30 ml and every scent is 40% perfume oil. Write to us at contact@houseofsampea.com.",
   path: "/",
 });
@@ -25,11 +26,6 @@ export default function Page() {
         "secondaryCta": {
           "label": "About the house",
           "href": "/about"
-        },
-        "image": {
-          "alt": "",
-          "brief": "",
-          "aspect": "landscape"
         },
         "facts": [
           "30 ml, every bottle",
@@ -59,13 +55,7 @@ export default function Page() {
         "paragraphs": [
           "Each Sampéa scent is 40% perfume oil. Each bottle holds 30 ml. Both numbers stay the same across the whole house.",
           "Names, notes and prices are not public yet. We'll share them when Sampéa launches."
-        ],
-        "image": {
-          "alt": "",
-          "brief": "",
-          "aspect": "landscape"
-        },
-        "imageSide": "right"
+        ]
       } satisfies StoryProps)} />
       <CtaBand {...({
         "eyebrow": "Before launch",

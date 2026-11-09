@@ -4,7 +4,7 @@ import type { ProseProps } from '@/components/kit';
 import { organizationLd, websiteLd, breadcrumbLd } from '@/lib/schema';
 
 export const metadata = pageMetadata({
-  title: "Terms of Use | Sampéa",
+  title: "Terms of Use",
   description: "The terms that apply when you use the Sampéa website. Nothing is for sale on this site yet; it shares information about a perfume house before launch.",
   path: "/terms",
 });

@@ -22,7 +22,7 @@ export const siteConfig: SiteConfig = {
   },
   "address": {
     "line": null,
-    "locality": "Launching in India",
+    "locality": null,
     "country": null
   },
   "hours": {
