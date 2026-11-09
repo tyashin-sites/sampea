@@ -1,0 +1,85 @@
+name: Tyashin preview
+on:
+  push:
+    branches: ['tyashin/edit-*']
+
+concurrency:
+  group: tyashin-preview-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Fetch build-time env from Tyashin
+        run: |
+          SECRETS_JSON=$(curl -sS "${{ secrets.TYASHIN_API_URL }}/api/v1/builds/secrets/${{ github.repository }}" \
+            -H "X-Build-Secret: ${{ secrets.TYASHIN_BUILD_SECRET }}")
+          echo "$SECRETS_JSON" | node -e "
+            const data = JSON.parse(require('fs').readFileSync('/dev/stdin','utf8'));
+            if (!data.success || !data.data) process.exit(0);
+            const fs = require('fs');
+            for (const [key, val] of Object.entries(data.data)) {
+              const v = String(val ?? '');
+              fs.appendFileSync(process.env.GITHUB_ENV, key + '<<__TYASHIN_EOF__\n' + v + '\n__TYASHIN_EOF__\n');
+              console.log('::add-mask::' + v);
+            }
+          "
+
+      - name: Build with OpenNext
+        run: npx @opennextjs/cloudflare build
+
+      - name: Upload preview version (no live traffic)
+        id: preview
+        env:
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+        run: |
+          ALIAS="e-${GITHUB_REF_NAME#tyashin/edit-}"
+          OUT=$(npx wrangler versions upload --preview-alias "$ALIAS" 2>&1) || { echo "$OUT"; exit 1; }
+          echo "$OUT"
+          URL=$(echo "$OUT" | grep -oE "https://$ALIAS-[a-z0-9.-]+\.workers\.dev" | head -1)
+          echo "url=$URL" >> "$GITHUB_OUTPUT"
+
+      - name: Notify Tyashin (preview ready)
+        if: success()
+        run: |
+          curl -sS -X POST "${{ secrets.TYASHIN_API_URL }}/api/v1/builds/webhook" \
+            -H "Content-Type: application/json" \
+            -H "X-Build-Secret: ${{ secrets.TYASHIN_BUILD_SECRET }}" \
+            -d '{
+              "kind": "preview",
+              "repo": "${{ github.repository }}",
+              "branch": "${{ github.ref_name }}",
+              "commit_sha": "${{ github.sha }}",
+              "status": "success",
+              "preview_url": "${{ steps.preview.outputs.url }}",
+              "run_id": "${{ github.run_id }}"
+            }'
+
+      - name: Notify Tyashin (preview failed)
+        if: failure()
+        run: |
+          curl -sS -X POST "${{ secrets.TYASHIN_API_URL }}/api/v1/builds/webhook" \
+            -H "Content-Type: application/json" \
+            -H "X-Build-Secret: ${{ secrets.TYASHIN_BUILD_SECRET }}" \
+            -d '{
+              "kind": "preview",
+              "repo": "${{ github.repository }}",
+              "branch": "${{ github.ref_name }}",
+              "commit_sha": "${{ github.sha }}",
+              "status": "failed",
+              "run_id": "${{ github.run_id }}"
+            }'
