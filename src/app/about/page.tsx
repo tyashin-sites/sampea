@@ -2,6 +2,7 @@ import { pageMetadata } from '@/lib/seo';
 import { Breadcrumbs, CtaBand, Faq, JsonLd, Story } from '@/components/kit';
 import type { CtaBandProps, FaqProps, StoryProps } from '@/components/kit';
 import { organizationLd, websiteLd, breadcrumbLd, faqLd } from '@/lib/schema';
+import { BOTTLE_PROFILE } from '@/config/media';
 
 export const metadata = pageMetadata({
   title: "About Sampéa | A perfume house in the making",
@@ -30,6 +31,12 @@ export default function Page() {
           "Every bottle is 30 ml. Every scent is 40% perfume oil. Those two things will not change from one scent to the next.",
           "Sampéa will launch in India, Canada and the US. Until then, the scents stay private and the door stays open by email."
         ],
+        "image": {
+          "src": BOTTLE_PROFILE,
+          "alt": "The Sampéa bottle seen from the side.",
+          "brief": "",
+          "aspect": "wide"
+        },
         "facts": [
           {
             "label": "Bottle size",

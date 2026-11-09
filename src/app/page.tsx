@@ -2,6 +2,7 @@ import { pageMetadata } from '@/lib/seo';
 import { CtaBand, Hero, JsonLd, Stats, Story } from '@/components/kit';
 import type { CtaBandProps, HeroProps, StatsProps, StoryProps } from '@/components/kit';
 import { organizationLd, websiteLd } from '@/lib/schema';
+import { BOTTLE_DETAIL, BOTTLE_FRONT, BOTTLE_HERO } from '@/config/media';
 
 export const metadata = pageMetadata({
   title: "Sampéa | A perfume house, not yet launched",
@@ -15,7 +16,7 @@ export default function Page() {
     <>
       <JsonLd nodes={[organizationLd("Organization"), websiteLd()]} />
       <Hero {...({
-        "variant": "centered",
+        "variant": "split",
         "eyebrow": "Perfume house · Not yet launched",
         "headline": "A perfume house, still in the making",
         "sub": "Sampéa has not launched yet. When it does, every bottle will be 30 ml and every scent will be 40% perfume oil.",
@@ -26,6 +27,13 @@ export default function Page() {
         "secondaryCta": {
           "label": "About the house",
           "href": "/about"
+        },
+        "image": {
+          "src": BOTTLE_HERO,
+          "alt": "The Sampéa bottle at a three-quarter angle: white glass with a gold cap and the Sampéa name in gold.",
+          "brief": "",
+          "aspect": "landscape",
+          "priority": true
         },
         "facts": [
           "30 ml, every bottle",
@@ -49,13 +57,36 @@ export default function Page() {
         "dark": true
       } satisfies StatsProps)} />
       <Story {...({
-        "variant": "stacked",
+        "variant": "split",
         "eyebrow": "One size, one strength",
         "headline": "The only choice left is the scent",
         "paragraphs": [
           "Each Sampéa scent is 40% perfume oil. Each bottle holds 30 ml. Both numbers stay the same across the whole house.",
           "Names, notes and prices are not public yet. We'll share them when Sampéa launches."
-        ]
+        ],
+        "image": {
+          "src": BOTTLE_DETAIL,
+          "alt": "Close view of the gold cap on the Sampéa bottle.",
+          "brief": "",
+          "aspect": "square"
+        },
+        "imageSide": "left"
+      } satisfies StoryProps)} />
+      <Story {...({
+        "variant": "split",
+        "eyebrow": "At launch",
+        "headline": "Your name on the bottle",
+        "paragraphs": [
+          "When Sampéa launches, you'll be able to put a name on a bottle. That name becomes its own Sampéa product, and nobody else can order it. Think of a number plate.",
+          "Nothing about the perfume changes. Still 30 ml, still 40% perfume oil. The name is the part that is only yours."
+        ],
+        "image": {
+          "src": BOTTLE_FRONT,
+          "alt": "The front of the Sampéa bottle, where a name would sit below the gold wordmark.",
+          "brief": "",
+          "aspect": "portrait"
+        },
+        "imageSide": "right"
       } satisfies StoryProps)} />
       <CtaBand {...({
         "eyebrow": "Before launch",
