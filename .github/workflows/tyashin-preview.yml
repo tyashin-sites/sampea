@@ -51,6 +51,10 @@ jobs:
           OUT=$(npx wrangler versions upload --preview-alias "$ALIAS" 2>&1) || { echo "$OUT"; exit 1; }
           echo "$OUT"
           URL=$(echo "$OUT" | grep -oE "https://$ALIAS-[a-z0-9.-]+\.workers\.dev" | head -1)
+          if [ -z "$URL" ]; then
+            echo "::error::No preview URL came back. The Worker needs preview_urls set to true in wrangler.jsonc."
+            exit 1
+          fi
           echo "url=$URL" >> "$GITHUB_OUTPUT"
 
       - name: Notify Tyashin (preview ready)
