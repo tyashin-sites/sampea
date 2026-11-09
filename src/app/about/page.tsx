@@ -4,7 +4,7 @@ import type { CtaBandProps, FaqProps, StoryProps } from '@/components/kit';
 import { organizationLd, websiteLd, breadcrumbLd, faqLd } from '@/lib/schema';
 
 export const metadata = pageMetadata({
-  title: "About Sampéa | A perfume house in the making",
+  title: "About the house",
   description: "Sampéa is a perfume house preparing to launch in India, Canada and the US. One bottle size, 30 ml, and 40% perfume oil in every scent.",
   path: "/about",
 });

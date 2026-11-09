@@ -4,7 +4,7 @@ import type { ContactProps, CtaBandProps } from '@/components/kit';
 import { organizationLd, websiteLd, breadcrumbLd } from '@/lib/schema';
 
 export const metadata = pageMetadata({
-  title: "Contact Sampéa",
+  title: "Contact",
   description: "Write to Sampéa at contact@houseofsampea.com with questions about the house, press enquiries or anything else. Sampéa has not launched yet.",
   path: "/contact",
 });
