@@ -41,16 +41,61 @@ jobs:
       - name: Build with OpenNext
         run: npx @opennextjs/cloudflare build
 
-      - name: Upload preview version (no live traffic)
+      # Cloudflare gives NO preview URLs to a Worker that implements a Durable
+      # Object, and every OpenNext site does (DOQueueHandler, the ISR queue).
+      # So a preview-alias version upload uploaded fine and never returned a
+      # URL (proved on tyashin-sites/sampea, 2026-11-09). Instead the branch is
+      # deployed as its OWN Worker, e-<id>-<script>, on workers.dev only: the
+      # config copy in this checkout drops routes and points the self-reference
+      # at the preview Worker; nothing is committed. The platform deletes the
+      # preview Worker on publish or discard (preview.ts).
+      - name: Deploy preview Worker (no live traffic)
         id: preview
         env:
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          TYASHIN_API_URL: ${{ secrets.TYASHIN_API_URL }}
+          TYASHIN_BUILD_SECRET: ${{ secrets.TYASHIN_BUILD_SECRET }}
         run: |
           ALIAS="e-${GITHUB_REF_NAME#tyashin/edit-}"
-          OUT=$(npx wrangler versions upload --preview-alias "$ALIAS" 2>&1) || { echo "$OUT"; exit 1; }
+          SECRETS_FILE="$RUNNER_TEMP/preview-secrets.json"
+          curl -sS "$TYASHIN_API_URL/api/v1/builds/secrets/$GITHUB_REPOSITORY" \
+            -H "X-Build-Secret: $TYASHIN_BUILD_SECRET" -o "$RUNNER_TEMP/secrets-response.json"
+          export ALIAS SECRETS_FILE
+          NAME=$(node <<'__TYASHIN_JS__'
+          const fs = require('fs');
+          const res = JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP + '/secrets-response.json', 'utf8') || '{}');
+          const secrets = {};
+          for (const [k, v] of Object.entries((res && res.success && res.data) || {})) secrets[k] = String(v ?? '');
+          fs.writeFileSync(process.env.SECRETS_FILE, JSON.stringify(secrets), { mode: 0o600 });
+          const file = ['wrangler.jsonc', 'wrangler.json'].find((f) => fs.existsSync(f));
+          if (!file) { console.error('No wrangler.jsonc in the repo'); process.exit(1); }
+          const raw = fs.readFileSync(file, 'utf8');
+          let cfg;
+          try { cfg = JSON.parse(raw); } catch {
+            cfg = JSON.parse(raw.replace(/^\s*\/\/.*$/gm, '').replace(/,(\s*[}\]])/g, '$1'));
+          }
+          const live = cfg.name;
+          const name = process.env.ALIAS + '-' + live;
+          if (name.length > 63) { console.error('Preview Worker name too long: ' + name); process.exit(1); }
+          cfg.name = name;
+          cfg.workers_dev = true;
+          delete cfg.preview_urls;
+          delete cfg.routes;
+          delete cfg.route;
+          for (const s of cfg.services || []) if (s.service === live) s.service = name;
+          fs.writeFileSync(file, JSON.stringify(cfg, null, 2));
+          process.stdout.write(name);
+          __TYASHIN_JS__
+          )
+          OUT=$(npx wrangler deploy --secrets-file "$SECRETS_FILE" 2>&1) || { rm -f "$SECRETS_FILE"; echo "$OUT"; exit 1; }
+          rm -f "$SECRETS_FILE" "$RUNNER_TEMP/secrets-response.json"
           echo "$OUT"
-          URL=$(echo "$OUT" | grep -oE "https://$ALIAS-[a-z0-9.-]+\.workers\.dev" | head -1)
+          URL=$(echo "$OUT" | grep -oE "https://$NAME\.[a-z0-9-]+\.workers\.dev" | head -1)
+          if [ -z "$URL" ]; then
+            echo "::error::The preview Worker $NAME deployed but wrangler printed no workers.dev URL."
+            exit 1
+          fi
           echo "url=$URL" >> "$GITHUB_OUTPUT"
 
       - name: Notify Tyashin (preview ready)
