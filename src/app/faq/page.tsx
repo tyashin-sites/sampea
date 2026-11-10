@@ -5,7 +5,7 @@ import { organizationLd, websiteLd, breadcrumbLd, faqLd } from '@/lib/schema';
 
 export const metadata = pageMetadata({
   title: "FAQ",
-  description: "Answers about Sampéa before launch: bottle size, perfume oil, where we're launching, and why there are no prices or scent names on the site yet.",
+  description: "Answers about Sampéa: the 30 ml bottle, the 40% perfume oil in every scent, where the house is available and how to reach us.",
   path: "/faq",
 });
 
@@ -14,7 +14,7 @@ const CRUMBS = [{"name":"Home","path":"/"},{"name":"FAQ","path":"/faq"}];
 export default function Page() {
   return (
     <>
-      <JsonLd nodes={[organizationLd("Store"), websiteLd(), faqLd([{"q":"Has Sampéa launched?","a":"Not yet. Sampéa is a perfume house that hasn't launched, and no launch date has been announced."},{"q":"Where will Sampéa launch?","a":"In Canada and the US."},{"q":"How big is a bottle?","a":"Every bottle is 30 ml."},{"q":"How much perfume oil is in each scent?","a":"Every scent is 40% perfume oil."},{"q":"What are the scents, and what will they cost?","a":"Scent names, notes and prices aren't public yet. Join the launch list on the product page to hear when they are."},{"q":"How do I join the launch list?","a":"Open the bottle's product page in the shop. The launch list sits where the price will be."},{"q":"What does the bottle look like?","a":"Rectangular clear glass with a heavy base, a spray pump, a polished gold peaked cap and the gold SAMPÉA wordmark with a lotus."},{"q":"How can I reach you?","a":"Write to contact@houseofsampea.com."}]), breadcrumbLd(CRUMBS)]} />
+      <JsonLd nodes={[organizationLd("Store"), websiteLd(), faqLd([{"q":"How much does a bottle hold?","a":"Every Sampéa bottle holds 30 ml."},{"q":"What concentration is each scent?","a":"Every scent is 40% perfume oil."},{"q":"Why do all the bottles look the same?","a":"Sampéa uses one bottle across the whole house: the gold SAMPÉA wordmark and the lotus, with a gold cap. The scents are told apart by name, not by bottle."},{"q":"Where is Sampéa available?","a":"Canada and the US."},{"q":"What is Le Cercle Sampéa?","a":"The circle of people who wear Sampéa."},{"q":"When can I order?","a":"Dates and prices aren't public yet. Join the list on any scent's page in the shop to hear first, or write to contact@houseofsampea.com."},{"q":"How do I reach Sampéa?","a":"By email, at contact@houseofsampea.com."}]), breadcrumbLd(CRUMBS)]} />
       <Breadcrumbs items={CRUMBS} />
       <section className="section pb-0">
         <div className="container-x max-w-3xl">
@@ -22,52 +22,41 @@ export default function Page() {
         </div>
       </section>
       <Faq {...({
-        "eyebrow": "Before launch",
-        "headline": "What we can tell you today",
         "items": [
           {
-            "q": "Has Sampéa launched?",
-            "a": "Not yet. Sampéa is a perfume house that hasn't launched, and no launch date has been announced."
+            "q": "How much does a bottle hold?",
+            "a": "Every Sampéa bottle holds 30 ml."
           },
           {
-            "q": "Where will Sampéa launch?",
-            "a": "In Canada and the US."
-          },
-          {
-            "q": "How big is a bottle?",
-            "a": "Every bottle is 30 ml."
-          },
-          {
-            "q": "How much perfume oil is in each scent?",
+            "q": "What concentration is each scent?",
             "a": "Every scent is 40% perfume oil."
           },
           {
-            "q": "What are the scents, and what will they cost?",
-            "a": "Scent names, notes and prices aren't public yet. Join the launch list on the product page to hear when they are."
+            "q": "Why do all the bottles look the same?",
+            "a": "Sampéa uses one bottle across the whole house: the gold SAMPÉA wordmark and the lotus, with a gold cap. The scents are told apart by name, not by bottle."
           },
           {
-            "q": "How do I join the launch list?",
-            "a": "Open the bottle's product page in the shop. The launch list sits where the price will be."
+            "q": "Where is Sampéa available?",
+            "a": "Canada and the US."
           },
           {
-            "q": "What does the bottle look like?",
-            "a": "Rectangular clear glass with a heavy base, a spray pump, a polished gold peaked cap and the gold SAMPÉA wordmark with a lotus."
+            "q": "What is Le Cercle Sampéa?",
+            "a": "The circle of people who wear Sampéa."
           },
           {
-            "q": "How can I reach you?",
-            "a": "Write to contact@houseofsampea.com."
+            "q": "When can I order?",
+            "a": "Dates and prices aren't public yet. Join the list on any scent's page in the shop to hear first, or write to contact@houseofsampea.com."
+          },
+          {
+            "q": "How do I reach Sampéa?",
+            "a": "By email, at contact@houseofsampea.com."
           }
         ]
       } satisfies FaqProps)} />
       <CtaBand {...({
-        "eyebrow": "Not yet launched",
-        "headline": "Join the launch list",
-        "body": "It's on the product page in our shop.",
+        "headline": "Something we didn't answer?",
+        "body": "Write to the house and ask.",
         "primaryCta": {
-          "label": "Go to the shop",
-          "href": "/shop"
-        },
-        "secondaryCta": {
           "label": "Write to us",
           "href": "mailto:contact@houseofsampea.com"
         }

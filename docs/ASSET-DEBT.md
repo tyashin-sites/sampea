@@ -2,8 +2,8 @@
 
 | Item | Needed for |
 |---|---|
-| Photo of the bottle from the front on a plain cream ground (full bottle, gold peaked cap and wordmark visible, no props or people) | Home hero image |
-| Low, close photo of the bottle's heavy glass base | The Bottle page, 'The glass' section |
-| Close-up of the polished gold peaked cap | The Bottle page, 'The cap' section |
-| Detail photo of the gold SAMPÉA wordmark and lotus on the glass | The Bottle page, 'The mark' section |
-| Review of the privacy policy and terms of use by the business (including governing jurisdiction and the payment provider used at checkout) | /privacy and /terms before go-live |
+| Gold SAMPÉA wordmark as an SVG or high-resolution transparent PNG | Site header, footer and social preview image |
+| Tagline (to confirm, only if the house wants one) | Brand metadata and social previews |
+| Each scent set up in the Tyashin store with its launch list turned on | /shop and the product pages, where visitors join the list |
+| Product photos for each scent's page: front with the wordmark and lotus, and the base (no cap close-ups) | Product pages rendered from the store |
+| Review of the Privacy policy and Terms of use by the house's adviser | /privacy and /terms before going live |

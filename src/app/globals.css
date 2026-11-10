@@ -7,18 +7,18 @@
    `html:root` still outranks the plain `:root{}` block the platform edge
    injects, because that block fills unset slots with platform defaults. */
 html:root {
-  --brand-primary: #1F2A44;
-  --brand-primary-deep: color-mix(in oklab, #1F2A44 82%, #161C2E);
-  --brand-primary-contrast: #F7F2E8;
-  --brand-accent: #B08D4A;
-  --brand-accent-soft: color-mix(in oklab, #B08D4A 68%, #ffffff);
-  --brand-ink: #161C2E;
-  --brand-paper: #F7F2E8;
-  --brand-bg: #F7F2E8;
-  --brand-surface: color-mix(in oklab, #1F2A44 5%, #F7F2E8);
-  --brand-text: #2B2E38;
-  --brand-text-muted: color-mix(in srgb, #2B2E38 72%, #F7F2E8);
-  --brand-border: color-mix(in oklab, #2B2E38 12%, transparent);
+  --brand-primary: #4A2A3F;
+  --brand-primary-deep: color-mix(in oklab, #4A2A3F 82%, #1C1A1F);
+  --brand-primary-contrast: #F3ECE0;
+  --brand-accent: #B08D57;
+  --brand-accent-soft: color-mix(in oklab, #B08D57 68%, #ffffff);
+  --brand-ink: #1C1A1F;
+  --brand-paper: #F3ECE0;
+  --brand-bg: #F3ECE0;
+  --brand-surface: color-mix(in oklab, #4A2A3F 5%, #F3ECE0);
+  --brand-text: #1C1A1F;
+  --brand-text-muted: color-mix(in srgb, #1C1A1F 72%, #F3ECE0);
+  --brand-border: color-mix(in oklab, #1C1A1F 12%, transparent);
 
   --brand-radius-sm: 0.125rem;
   --brand-radius-md: 0.25rem;
@@ -34,33 +34,33 @@ html:root {
   --dur-reveal: 600ms;
   --dur-hero: 900ms;
 
-  --shadow-rest: 0 1px 2px color-mix(in oklab, #161C2E 6%, transparent), 0 4px 16px color-mix(in oklab, #161C2E 5%, transparent);
-  --shadow-hover: 0 2px 6px color-mix(in oklab, #161C2E 6%, transparent), 0 12px 32px color-mix(in oklab, #B08D4A 16%, transparent), 0 24px 64px color-mix(in oklab, #161C2E 10%, transparent);
+  --shadow-rest: 0 1px 2px color-mix(in oklab, #1C1A1F 6%, transparent), 0 4px 16px color-mix(in oklab, #1C1A1F 5%, transparent);
+  --shadow-hover: 0 2px 6px color-mix(in oklab, #1C1A1F 6%, transparent), 0 12px 32px color-mix(in oklab, #B08D57 16%, transparent), 0 24px 64px color-mix(in oklab, #1C1A1F 10%, transparent);
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme='light']) {
-    --brand-bg: color-mix(in oklab, #161C2E 88%, #000000);
-    --brand-surface: color-mix(in oklab, #161C2E 70%, #000000);
-    --brand-ink: color-mix(in oklab, #161C2E 60%, #000000);
-    --brand-text: color-mix(in oklab, #F7F2E8 94%, #161C2E);
-    --brand-text-muted: color-mix(in oklab, #F7F2E8 66%, #161C2E);
-    --brand-border: color-mix(in oklab, #F7F2E8 12%, transparent);
-    --brand-primary: #B08D4A;
-    --brand-primary-deep: color-mix(in oklab, #B08D4A 80%, #ffffff);
-    --brand-primary-contrast: #161C2E;
+    --brand-bg: color-mix(in oklab, #1C1A1F 88%, #000000);
+    --brand-surface: color-mix(in oklab, #1C1A1F 70%, #000000);
+    --brand-ink: color-mix(in oklab, #1C1A1F 60%, #000000);
+    --brand-text: color-mix(in oklab, #F3ECE0 94%, #1C1A1F);
+    --brand-text-muted: color-mix(in oklab, #F3ECE0 66%, #1C1A1F);
+    --brand-border: color-mix(in oklab, #F3ECE0 12%, transparent);
+    --brand-primary: #B08D57;
+    --brand-primary-deep: color-mix(in oklab, #B08D57 80%, #ffffff);
+    --brand-primary-contrast: #1C1A1F;
   }
 }
 :root[data-theme='dark'] {
-  --brand-bg: color-mix(in oklab, #161C2E 88%, #000000);
-  --brand-surface: color-mix(in oklab, #161C2E 70%, #000000);
-  --brand-ink: color-mix(in oklab, #161C2E 60%, #000000);
-  --brand-text: color-mix(in oklab, #F7F2E8 94%, #161C2E);
-  --brand-text-muted: color-mix(in oklab, #F7F2E8 66%, #161C2E);
-  --brand-border: color-mix(in oklab, #F7F2E8 12%, transparent);
-  --brand-primary: #B08D4A;
-  --brand-primary-deep: color-mix(in oklab, #B08D4A 80%, #ffffff);
-  --brand-primary-contrast: #161C2E;
+  --brand-bg: color-mix(in oklab, #1C1A1F 88%, #000000);
+  --brand-surface: color-mix(in oklab, #1C1A1F 70%, #000000);
+  --brand-ink: color-mix(in oklab, #1C1A1F 60%, #000000);
+  --brand-text: color-mix(in oklab, #F3ECE0 94%, #1C1A1F);
+  --brand-text-muted: color-mix(in oklab, #F3ECE0 66%, #1C1A1F);
+  --brand-border: color-mix(in oklab, #F3ECE0 12%, transparent);
+  --brand-primary: #B08D57;
+  --brand-primary-deep: color-mix(in oklab, #B08D57 80%, #ffffff);
+  --brand-primary-contrast: #1C1A1F;
 }
 
 @layer base {
@@ -667,10 +667,14 @@ html:root {
   .hero-immersive-scrim {
     background: linear-gradient(
       to top,
-      color-mix(in oklab, var(--brand-ink) 78%, transparent) 0%,
-      color-mix(in oklab, var(--brand-ink) 35%, transparent) 45%,
-      transparent 75%
+      color-mix(in oklab, var(--brand-ink) 86%, transparent) 0%,
+      color-mix(in oklab, var(--brand-ink) 62%, transparent) 45%,
+      color-mix(in oklab, var(--brand-ink) 18%, transparent) 80%,
+      transparent 100%
     );
+  }
+  .hero-immersive .eyebrow {
+    color: color-mix(in oklab, var(--brand-paper) 88%, var(--brand-accent));
   }
   .hero-immersive .lead {
     color: color-mix(in oklab, var(--brand-paper) 86%, transparent);

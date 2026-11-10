@@ -2,12 +2,12 @@ import localFont from 'next/font/local';
 
 // Type stack (docs/DESIGN-SPEC.md), SELF-HOSTED via next/font/local so the CI
 // build never depends on a network fetch to Google Fonts.
-//   Headings — Cormorant Garamond
+//   Headings — Fraunces
 //   Body     — Manrope
 //   Data     — JetBrains Mono
 
 export const headingFont = localFont({
-  src: [{ path: '../fonts/cormorant-garamond.woff2', weight: '400 700', style: 'normal' }],
+  src: [{ path: '../fonts/fraunces.woff2', weight: '400 700', style: 'normal' }],
   variable: '--font-heading',
   display: 'swap',
 });

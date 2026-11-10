@@ -28,36 +28,32 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: "#F7F2E8" },
-    { media: '(prefers-color-scheme: dark)', color: "#161C2E" },
+    { media: '(prefers-color-scheme: light)', color: "#F3ECE0" },
+    { media: '(prefers-color-scheme: dark)', color: "#1C1A1F" },
   ],
 };
 
 // First-frame ground: html/body take the page background before the CSS
 // bundle arrives, so there is no white flash on dark schemes.
 const FIRST_FRAME_CSS = `
-html, body { background-color: #F7F2E8; }
-@media (prefers-color-scheme: dark) { html:root:not([data-theme="light"]), html:root:not([data-theme="light"]) body { background-color: color-mix(in oklab, #161C2E 88%, #000000); } }
-html:root[data-theme="dark"], html:root[data-theme="dark"] body { background-color: color-mix(in oklab, #161C2E 88%, #000000); }
+html, body { background-color: #F3ECE0; }
+@media (prefers-color-scheme: dark) { html:root:not([data-theme="light"]), html:root:not([data-theme="light"]) body { background-color: color-mix(in oklab, #1C1A1F 88%, #000000); } }
+html:root[data-theme="dark"], html:root[data-theme="dark"] body { background-color: color-mix(in oklab, #1C1A1F 88%, #000000); }
 `;
 
 const FOOTER = {
-  "blurb": "Sampéa is a perfume house, not yet launched. Launching in Canada and the US.",
+  "blurb": "Perfume oil for Canada and the US. Every bottle 30 ml, every scent 40% perfume oil, one bottle for the whole house.",
   "columns": [
     {
-      "heading": "Shop",
+      "heading": "Sampéa",
       "links": [
-        {
-          "label": "Shop",
-          "href": "/shop"
-        },
         {
           "label": "The Bottle",
           "href": "/the-bottle"
         },
         {
-          "label": "Cart",
-          "href": "/cart"
+          "label": "About",
+          "href": "/about"
         },
         {
           "label": "Blog",
@@ -66,12 +62,21 @@ const FOOTER = {
       ]
     },
     {
-      "heading": "House",
+      "heading": "Shop",
       "links": [
         {
-          "label": "About",
-          "href": "/about"
+          "label": "Shop",
+          "href": "/shop"
         },
+        {
+          "label": "Cart",
+          "href": "/cart"
+        }
+      ]
+    },
+    {
+      "heading": "Help",
+      "links": [
         {
           "label": "FAQ",
           "href": "/faq"

@@ -8,32 +8,32 @@ const PAGES: { label: string; path: string; description: string }[] = [
   {
     "label": "Home",
     "path": "/",
-    "description": "Sampéa is a perfume house that has not launched yet. Every bottle is 30 ml and every scent is 40% perfume oil. Join the launch list in our shop."
+    "description": "Sampéa makes perfume oil for Canada and the US. Every bottle holds 30 ml and every scent is 40% perfume oil. One bottle for the whole house."
   },
   {
     "label": "Shop",
     "path": "/shop",
-    "description": "Sampéa's first bottle: 30 ml, 40% perfume oil. Prices aren't public yet, so the product page has a launch list where the price will be."
+    "description": "The scents of Sampéa, each in the same 30 ml bottle at 40% perfume oil. Open a scent's own page to add your name to its list."
   },
   {
     "label": "The Bottle",
     "path": "/the-bottle",
-    "description": "The gold SAMPÉA wordmark and lotus, rectangular clear glass on a heavy base, a spray pump and a gold cap. 30 ml in every bottle."
+    "description": "One bottle across the whole house: the gold SAMPÉA wordmark and the lotus, a gold cap and a heavy glass base. Every bottle holds 30 ml."
   },
   {
     "label": "About",
     "path": "/about",
-    "description": "Sampéa is a perfume house launching in Canada and the US. Every bottle is 30 ml and every scent is 40% perfume oil. Not yet launched."
+    "description": "Sampéa is a perfume house built on access, for people in Canada and the US who want a scent few others wear. Meet Le Cercle Sampéa."
   },
   {
     "label": "FAQ",
     "path": "/faq",
-    "description": "Answers about Sampéa before launch: bottle size, perfume oil, where we're launching, and why there are no prices or scent names on the site yet."
+    "description": "Answers about Sampéa: the 30 ml bottle, the 40% perfume oil in every scent, where the house is available and how to reach us."
   },
   {
     "label": "Contact",
     "path": "/contact",
-    "description": "Write to Sampéa at contact@houseofsampea.com. We're a perfume house that hasn't launched yet, launching in Canada and the US."
+    "description": "Write to Sampéa at contact@houseofsampea.com with questions about the bottle, the scents or Le Cercle Sampéa. Email reaches the house."
   }
 ];
 

@@ -5,7 +5,7 @@ import { organizationLd, websiteLd, breadcrumbLd } from '@/lib/schema';
 
 export const metadata = pageMetadata({
   title: "About",
-  description: "Sampéa is a perfume house launching in Canada and the US. Every bottle is 30 ml and every scent is 40% perfume oil. Not yet launched.",
+  description: "Sampéa is a perfume house built on access, for people in Canada and the US who want a scent few others wear. Meet Le Cercle Sampéa.",
   path: "/about",
 });
 
@@ -24,25 +24,32 @@ export default function Page() {
       <Story {...({
         "variant": "stacked",
         "eyebrow": "The house",
-        "headline": "A perfume house, not yet launched",
+        "headline": "Built on access",
         "paragraphs": [
-          "Sampéa is a perfume house. We haven't launched, and our scent names, notes, prices and launch date aren't public yet.",
-          "Two things are settled. Every bottle holds 30 ml. Every scent is 40% perfume oil.",
-          "Launching in Canada and the US."
+          "Sampéa makes perfume oil for people in Canada and the US who want a scent that few others wear.",
+          "Every bottle holds 30 ml. Every scent is 40% perfume oil. One bottle, with the gold SAMPÉA wordmark and the lotus, serves the whole house."
         ],
-        "imageSide": "right"
+        "imageSide": "left"
+      } satisfies StoryProps)} />
+      <Story {...({
+        "variant": "stacked",
+        "eyebrow": "The circle",
+        "headline": "Le Cercle Sampéa",
+        "paragraphs": [
+          "Le Cercle Sampéa is the circle of people who wear Sampéa. Wearing it is how you belong."
+        ],
+        "imageSide": "left"
       } satisfies StoryProps)} />
       <CtaBand {...({
-        "eyebrow": "Not yet launched",
-        "headline": "Hear from us first",
-        "body": "Join the launch list on the product page in our shop.",
+        "headline": "Write to the house",
+        "body": "Tell us what you'd like to know. We read every message.",
         "primaryCta": {
-          "label": "Join the launch list",
-          "href": "/shop"
+          "label": "Write to us",
+          "href": "mailto:contact@houseofsampea.com"
         },
         "secondaryCta": {
-          "label": "See the bottle",
-          "href": "/the-bottle"
+          "label": "See the shop",
+          "href": "/shop"
         }
       } satisfies CtaBandProps)} />
     </>

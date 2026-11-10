@@ -59,15 +59,21 @@ export function Hero(props: HeroProps) {
   // height (svh) so the photo never shifts layout (CLS law); the photo loads
   // eagerly at high priority (LCP law); the scrim keeps text at AA contrast.
   if (variant === 'immersive' && image) {
+    // Phones get the whole photo first, then the copy: a landscape photo
+    // cropped to a portrait full-bleed frame zooms into one detail (on
+    // Sampéa, the cap the counsel hold keeps out of close-ups) and puts copy
+    // over the busiest part. md+ is full-bleed with the copy on a scrim.
     return (
-      <section className="hero-immersive on-dark relative isolate overflow-hidden">
-        <Placeholder
-          image={image}
-          priority
-          className="absolute inset-0 -z-10 aspect-auto h-full w-full rounded-none"
-        />
-        <div className="hero-immersive-scrim absolute inset-0 -z-10" aria-hidden />
-        <div className="container-x flex min-h-[86svh] flex-col justify-end pb-16 pt-40 md:pb-24">
+      <section className="hero-immersive on-dark ink relative isolate overflow-hidden">
+        <div className="relative md:absolute md:inset-0 md:-z-10">
+          <Placeholder
+            image={image}
+            priority
+            className="aspect-video w-full rounded-none md:absolute md:inset-0 md:aspect-auto md:h-full"
+          />
+          <div className="hero-immersive-scrim absolute inset-0 hidden md:block" aria-hidden />
+        </div>
+        <div className="container-x flex flex-col justify-end pb-14 pt-10 md:min-h-[86svh] md:pb-24 md:pt-40">
           <div className="max-w-3xl">
             {eyebrow ? <p className="eyebrow reveal">{eyebrow}</p> : null}
             <h1 className="tt-display reveal" style={{ animationDelay: '80ms' }}>

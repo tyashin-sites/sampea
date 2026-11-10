@@ -5,7 +5,7 @@ import { organizationLd, websiteLd, breadcrumbLd } from '@/lib/schema';
 
 export const metadata = pageMetadata({
   title: "Contact",
-  description: "Write to Sampéa at contact@houseofsampea.com. We're a perfume house that hasn't launched yet, launching in Canada and the US.",
+  description: "Write to Sampéa at contact@houseofsampea.com with questions about the bottle, the scents or Le Cercle Sampéa. Email reaches the house.",
   path: "/contact",
 });
 
@@ -17,22 +17,20 @@ export default function Page() {
       <JsonLd nodes={[organizationLd("Store"), websiteLd(), breadcrumbLd(CRUMBS)]} />
       <Breadcrumbs items={CRUMBS} />
       <Contact {...({
-        "eyebrow": "Contact",
-        "headline": "Write to Sampéa",
-        "body": "Our address is contact@houseofsampea.com. To hear when we launch, join the list on the product page.",
+        "headline": "Write to the house",
+        "body": "Email is the way to reach Sampéa. Ask about the bottle, the scents or Le Cercle Sampéa.",
         "headingLevel": "h1"
       } satisfies ContactProps)} />
       <CtaBand {...({
-        "eyebrow": "Not yet launched",
-        "headline": "Hear when we launch",
-        "body": "The launch list is on the product page, where the price will be.",
+        "headline": "See the scents first",
+        "body": "Each scent has its own page, all in the same 30 ml bottle.",
         "primaryCta": {
-          "label": "Join the launch list",
+          "label": "See the shop",
           "href": "/shop"
         },
         "secondaryCta": {
-          "label": "Read the FAQ",
-          "href": "/faq"
+          "label": "See the bottle",
+          "href": "/the-bottle"
         }
       } satisfies CtaBandProps)} />
     </>

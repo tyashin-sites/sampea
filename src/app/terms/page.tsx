@@ -5,7 +5,7 @@ import { organizationLd, websiteLd, breadcrumbLd } from '@/lib/schema';
 
 export const metadata = pageMetadata({
   title: "Terms of Use",
-  description: "The terms for using the Sampéa website and shop, including the launch list, product information before launch, and how to contact us.",
+  description: "The terms that apply when you use the Sampéa website or place an order with Sampéa, the perfume oil house serving Canada and the US.",
   path: "/terms",
 });
 
@@ -17,38 +17,38 @@ export default function Page() {
       <JsonLd nodes={[organizationLd("Store"), websiteLd(), breadcrumbLd(CRUMBS)]} />
       <Breadcrumbs items={CRUMBS} />
       <Prose {...({
-        "eyebrow": "Legal",
-        "headline": "Terms of use",
-        "intro": "These terms apply when you use the Sampéa website and shop. By using the site, you agree to them.",
+        "headline": "",
+        "intro": "These terms apply to your use of the Sampéa website and to orders placed through it. By using the site, you agree to them.",
         "blocks": [
           {
-            "heading": "Before launch",
+            "heading": "The website",
             "paragraphs": [
-              "Sampéa has not launched. Products shown on this site can't be bought yet, and scent names, notes, prices and the launch date aren't public. Joining the launch list doesn't reserve a product or commit you to buying one."
+              "The content on this site, including the SAMPÉA wordmark, the lotus, the text and the photographs, belongs to Sampéa. Please don't copy or reuse it without written permission."
             ]
           },
           {
-            "heading": "Orders",
+            "heading": "Products and orders",
             "paragraphs": [
-              "When sales open, prices and order terms will be shown in the shop and at checkout before you pay."
+              "Product details, availability and prices are shown on each product page and at checkout. An order is accepted when we confirm it. If we can't fulfil an order, we'll tell you and refund any payment taken.",
+              "Sampéa sells to customers in Canada and the US."
             ]
           },
           {
-            "heading": "Our content",
+            "heading": "Questions about an order",
             "paragraphs": [
-              "The text, images, the SAMPÉA wordmark and the lotus on this site belong to Sampéa. Please don't copy or reuse them without our permission."
+              "For anything about an order, including returns, write to contact@houseofsampea.com."
+            ]
+          },
+          {
+            "heading": "Liability",
+            "paragraphs": [
+              "The site is provided as it is. To the extent the law allows, Sampéa isn't liable for indirect losses arising from your use of the site."
             ]
           },
           {
             "heading": "Changes",
             "paragraphs": [
-              "We may update these terms. The current version is always the one on this page."
-            ]
-          },
-          {
-            "heading": "Contact",
-            "paragraphs": [
-              "Questions about these terms can be sent to contact@houseofsampea.com."
+              "We may update these terms. The version on this page is the one that applies."
             ]
           }
         ],

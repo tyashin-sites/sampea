@@ -1,71 +1,85 @@
 # Design spec — Sampéa
 
-**Thesis:** A sealed letter on cream paper: wide margins, ink-blue type and a single thread of gold, saying very little and meaning all of it.
+**Thesis:** Cream walls at dusk and one bottle catching gold light: the house says very little and lets the glass, the wordmark and two numbers do the talking.
 
-**Voice:** Quiet, exact and unhurried. Short sentences and plain words. Sampéa says only what it knows: the bottle, 30 ml, 40% perfume oil, not yet launched. It never fills a gap with a claim.
+**Voice:** Quiet and exact, with few words. Talks like a host letting one guest in: calm, plain, never pushing. States the two numbers and lets them stand.
 
 ## Tokens
 | Token | Value |
 |---|---|
-| Primary | #1F2A44 (text on it: #F7F2E8) |
-| Accent | #B08D4A |
-| Background / foreground | #F7F2E8 / #2B2E38 |
-| Ink (dark ground) | #161C2E |
-| Headings | Cormorant Garamond |
+| Primary | #4A2A3F (text on it: #F3ECE0) |
+| Accent | #B08D57 |
+| Background / foreground | #F3ECE0 / #1C1A1F |
+| Ink (dark ground) | #1C1A1F |
+| Headings | Fraunces |
 | Body | Manrope |
 | Radius | sharp |
 | Motion | subtle |
 
 ## Archetype
-ecommerce · Perfume house
+ecommerce · Perfume
 
 ## Pages
 ### Home — `/`
-Sampéa is a perfume house that has not launched yet. Every bottle is 30 ml and every scent is 40% perfume oil. Join the launch list in our shop.
+Sampéa makes perfume oil for Canada and the US. Every bottle holds 30 ml and every scent is 40% perfume oil. One bottle for the whole house.
 
-- **hero** (immersive): Every bottle 30 ml. Every scent 40% perfume oil.
-- **story** (stacked): The gold wordmark, the lotus, and a gold cap
-- **cta**: Be among the first to hear
+- **hero** (immersive): Perfume oil few others wear.
+- **story** (split): The gold wordmark and the lotus
+- **story** (stacked): A house built on access
+- **cta**: Write to the house
 
 ### Shop — `/shop`
-Sampéa's first bottle: 30 ml, 40% perfume oil. Prices aren't public yet, so the product page has a launch list where the price will be.
+The scents of Sampéa, each in the same 30 ml bottle at 40% perfume oil. Open a scent's own page to add your name to its list.
 
-- **story** (stacked): One bottle so far
-- **cta**: Something we haven't answered?
+- **story** (stacked): The scents of the house
+- **cta**: A question before you choose?
 
 ### The Bottle — `/the-bottle`
-The gold SAMPÉA wordmark and lotus, rectangular clear glass on a heavy base, a spray pump and a gold cap. 30 ml in every bottle.
+One bottle across the whole house: the gold SAMPÉA wordmark and the lotus, a gold cap and a heavy glass base. Every bottle holds 30 ml.
 
-- **story** (split): Rectangular, clear, on a heavy base
-- **story** (split): SAMPÉA in gold, with a lotus
-- **cta**: The bottle is waiting in the shop
+- **story** (split): Wordmark in gold, and the lotus
+- **story** (split): A heavy glass base
+- **story** (stacked): Every scent, the same bottle
+- **cta**: See the scents of the house
 
 ### About — `/about`
-Sampéa is a perfume house launching in Canada and the US. Every bottle is 30 ml and every scent is 40% perfume oil. Not yet launched.
+Sampéa is a perfume house built on access, for people in Canada and the US who want a scent few others wear. Meet Le Cercle Sampéa.
 
-- **story** (stacked): A perfume house, not yet launched
-- **cta**: Hear from us first
+- **story** (stacked): Built on access
+- **story** (stacked): Le Cercle Sampéa
+- **cta**: Write to the house
 
 ### FAQ — `/faq`
-Answers about Sampéa before launch: bottle size, perfume oil, where we're launching, and why there are no prices or scent names on the site yet.
+Answers about Sampéa: the 30 ml bottle, the 40% perfume oil in every scent, where the house is available and how to reach us.
 
-- **faq**: What we can tell you today
-- **cta**: Join the launch list
+- **faq**
+- **cta**: Something we didn't answer?
 
 ### Contact — `/contact`
-Write to Sampéa at contact@houseofsampea.com. We're a perfume house that hasn't launched yet, launching in Canada and the US.
+Write to Sampéa at contact@houseofsampea.com with questions about the bottle, the scents or Le Cercle Sampéa. Email reaches the house.
 
-- **contact**: Write to Sampéa
-- **cta**: Hear when we launch
+- **contact**: Write to the house
+- **cta**: See the scents first
 
 ### Privacy — `/privacy`
-How Sampéa handles the personal details you share on this site, including your email address when you join the launch list or write to us.
+How Sampéa handles the personal information you share on this site, when you order, join a list or write to contact@houseofsampea.com.
 
-- **prose**: Privacy policy
+- **prose**
 
 ### Terms — `/terms`
-The terms for using the Sampéa website and shop, including the launch list, product information before launch, and how to contact us.
+The terms that apply when you use the Sampéa website or place an order with Sampéa, the perfume oil house serving Canada and the US.
 
-- **prose**: Terms of use
+- **prose**
+
+## Normalisation notes
+The Studio adjusted the model's spec so it could not break the site:
+- /shop title: dropped the duplicate brand suffix
+- /the-bottle title: dropped the duplicate brand suffix
+- /about title: dropped the duplicate brand suffix
+- /faq title: dropped the duplicate brand suffix
+- /contact title: dropped the duplicate brand suffix
+- /privacy title: dropped the duplicate brand suffix
+- /terms title: dropped the duplicate brand suffix
+- footer: Blog link added (blog plugin installed)
 
 _Generated by Tyashin Website Studio. Edit through the Studio, not by hand._
