@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "savedAt": "2026-11-10T02:16:07.517Z",
+  "savedAt": "2026-11-10T08:21:08.720Z",
   "spec": {
     "brand": {
       "name": "Sampéa",
@@ -22,7 +22,8 @@
       "headingFont": "cormorant-garamond",
       "bodyFont": "manrope",
       "radius": "sharp",
-      "motion": "subtle"
+      "motion": "subtle",
+      "style": "luxury"
     },
     "pages": [
       {
@@ -34,7 +35,7 @@
         "sections": [
           {
             "type": "hero",
-            "variant": "editorial",
+            "variant": "immersive",
             "eyebrow": "Sampéa · Not yet launched",
             "headline": "Every bottle 30 ml. Every scent 40% perfume oil.",
             "sub": "Sampéa is a perfume house that hasn't launched yet. Our first bottle is in the shop, with a launch list where the price will be.",
@@ -47,8 +48,8 @@
               "href": "/the-bottle"
             },
             "image": {
-              "alt": "The Sampéa bottle in clear glass with a polished gold crown cap, on a cream ground",
-              "brief": "Customer's own photo of the Sampéa bottle, straight on, on a plain cream ground in soft daylight. Show the whole rectangular clear glass, the heavy base, the gold crown cap and the gold SAMPÉA wordmark with the lotus. No props, no people, no scent colour styling.",
+              "alt": "The Sampéa bottle in clear glass with the gold SAMPÉA wordmark and lotus, and a gold cap, on a cream ground",
+              "brief": "Customer's own photo of the Sampéa bottle, straight on, on a plain cream ground in soft daylight. Show the whole rectangular clear glass, the heavy base, the gold peaked cap and the gold SAMPÉA wordmark with the lotus. No props, no people, no scent colour styling.",
               "aspect": "portrait",
               "src": "https://website-api.tyashin.com/api/v1/public/media/media/6af1ee7a2976dd881e839d60/de9c052e5fe49daf61a71522b3b3761958b5d7931cd249c0511198f7304fa76d.jpg",
               "focus": "right"
@@ -60,30 +61,24 @@
             ]
           },
           {
-            "type": "stats",
-            "eyebrow": "In every bottle",
-            "headline": "Two things are already settled",
-            "items": [
-              {
-                "value": "30 ml",
-                "label": "In every bottle"
-              },
-              {
-                "value": "40%",
-                "label": "Perfume oil in every scent"
-              }
-            ],
-            "dark": true
-          },
-          {
             "type": "story",
             "variant": "stacked",
             "eyebrow": "The bottle",
-            "headline": "Clear glass, a heavy base, a gold crown",
+            "headline": "The gold wordmark, the lotus, and a gold cap",
             "paragraphs": [
-              "Each bottle is rectangular clear glass on a heavy base, with a spray pump and a polished gold crown cap. It carries the SAMPÉA wordmark in gold, with a lotus."
+              "Each bottle carries the SAMPÉA wordmark in gold, with a lotus. It's rectangular clear glass on a heavy base, with a spray pump and a gold cap."
             ],
-            "imageSide": "right"
+            "imageSide": "right",
+            "facts": [
+              {
+                "label": "In every bottle",
+                "value": "30 ml"
+              },
+              {
+                "label": "Perfume oil in every scent",
+                "value": "40%"
+              }
+            ]
           },
           {
             "type": "cta",
@@ -139,7 +134,7 @@
         "path": "/the-bottle",
         "label": "The Bottle",
         "title": "The Bottle",
-        "description": "Rectangular clear glass on a heavy base, a spray pump, a polished gold crown cap and the gold SAMPÉA wordmark with a lotus. 30 ml in every bottle.",
+        "description": "The gold SAMPÉA wordmark and lotus, rectangular clear glass on a heavy base, a spray pump and a gold cap. 30 ml in every bottle.",
         "heading": "The bottle",
         "inNav": true,
         "sections": [
@@ -173,31 +168,6 @@
           {
             "type": "story",
             "variant": "split",
-            "eyebrow": "The cap",
-            "headline": "A spray pump under a gold crown",
-            "paragraphs": [
-              "The cap is a polished gold crown. Beneath it is a spray pump."
-            ],
-            "image": {
-              "alt": "Close view of the polished gold crown cap",
-              "brief": "Customer's own close-up of the polished gold crown cap on the bottle, against cream. Keep the reflections clean and the shot still. No hands.",
-              "aspect": "square"
-            },
-            "imageSide": "left",
-            "facts": [
-              {
-                "label": "Cap",
-                "value": "Polished gold crown"
-              },
-              {
-                "label": "Closure",
-                "value": "Spray pump"
-              }
-            ]
-          },
-          {
-            "type": "story",
-            "variant": "split",
             "eyebrow": "The mark",
             "headline": "SAMPÉA in gold, with a lotus",
             "paragraphs": [
@@ -205,7 +175,7 @@
               "Inside, every bottle holds 30 ml, and every scent is 40% perfume oil."
             ],
             "image": {
-              "alt": "The gold SAMPÉA wordmark and lotus on the clear glass bottle",
+              "alt": "The gold SAMPÉA wordmark and lotus on the clear glass bottle, with the gold cap",
               "brief": "Customer's own detail photo of the gold SAMPÉA wordmark and lotus on the clear glass, sharp focus on the gold, cream ground behind. No props.",
               "aspect": "landscape",
               "src": "https://website-api.tyashin.com/api/v1/public/media/media/6af1ee7a2976dd881e839d60/7f2be30fa1e6a6e40ead38014f10b72df35ba0c5e8ffe57c951d3028c7276873.jpg"
@@ -313,7 +283,7 @@
               },
               {
                 "q": "What does the bottle look like?",
-                "a": "Rectangular clear glass with a heavy base, a spray pump, a polished gold crown cap and the gold SAMPÉA wordmark with a lotus."
+                "a": "Rectangular clear glass with a heavy base, a spray pump, a polished gold peaked cap and the gold SAMPÉA wordmark with a lotus."
               },
               {
                 "q": "How can I reach you?",
@@ -509,7 +479,7 @@
     },
     "assetDebt": [
       {
-        "item": "Photo of the bottle from the front on a plain cream ground (full bottle, gold crown cap and wordmark visible, no props or people)",
+        "item": "Photo of the bottle from the front on a plain cream ground (full bottle, gold peaked cap and wordmark visible, no props or people)",
         "neededFor": "Home hero image"
       },
       {
@@ -517,7 +487,7 @@
         "neededFor": "The Bottle page, 'The glass' section"
       },
       {
-        "item": "Close-up of the polished gold crown cap",
+        "item": "Close-up of the polished gold peaked cap",
         "neededFor": "The Bottle page, 'The cap' section"
       },
       {
@@ -549,7 +519,7 @@
     "src/app/robots.txt/route.ts": "5a3fd6dc87c7cada4ed30edfb521fbba60f96e40cbfe1488556a4f740067d92a",
     "src/app/sitemap-pages.xml/route.ts": "a150086a399d74f4595bd5acc97edea1d8310ea1b848f7a1915e209c9e8e393d",
     "src/components/kit/BrandKitStyle.tsx": "ae9f79969ccc1689387147c9b287b196475a146ee9837f73de72613d280de0ea",
-    "src/components/kit/BrandMark.tsx": "af7feb7660b2f383d898bde31d0a4555e27f82f17afe8940bcf8a75b8717a6ca",
+    "src/components/kit/BrandMark.tsx": "37b02874568ab13f4898f031788c2bb10e91f89ed9eb06961a6f5dd3fd2e7d55",
     "src/components/kit/Breadcrumbs.tsx": "6b560601620f5fbd60332a1d04c2cfc596cd8acf3217e2d00171f65c0d25abd3",
     "src/components/kit/Contact.tsx": "d7c8e81153ec2c4a2f37b67221e167262a563439fa45f94867ea53b2e36a9ab2",
     "src/components/kit/CtaBand.tsx": "ecd895c502f058f13c5d43ea2cfd034c5c40f58a8b5127c1e222c4e5fef76bbc",
@@ -559,11 +529,12 @@
     "src/components/kit/Footer.tsx": "97d57189ec3a1dcd6d31a9d6e9093a16d91658002bdd4e6c3b9583b22eae6710",
     "src/components/kit/Gallery.tsx": "693b9b04f17b31a87c26045b9e358a07729ac2b07b83a7f80613945ab3bb0eb2",
     "src/components/kit/Header.tsx": "fdbaa72370b4d11c661c7342423ff71881d2dc29c10d69a1cbb98f19ae99c722",
-    "src/components/kit/Hero.tsx": "f6ea9365887490d8b23c0d4bc2b2323a4e106203c3a0c2575f5c376fdf3497e7",
+    "src/components/kit/Hero.tsx": "e38be0ce659939655b30ce866450497977d9af195b08b9b27c8c84e5c274bf9b",
     "src/components/kit/Icon.tsx": "d72a89ba10c96a429926f25b3077450e0a141bf1e051c2bc19b4d79178305549",
     "src/components/kit/JsonLd.tsx": "7135116c53cbb0a3e39a1161f50af4fa269c1e32ebdcde60bda5cedbb235c075",
     "src/components/kit/LeadForm.tsx": "8a86eddd1afaec716661ff14bc62b37ed2c3d80569b91fcd1fac5acfc737d784",
     "src/components/kit/MobileNav.tsx": "0f959f475b01bc07243af0b7dec0c86d9bae2777fc99dbb738e2c59af31ef293",
+    "src/components/kit/Model3d.tsx": "4f7545ce9ffee99f4cd819c6c9f90e4a0e81c562a8e5768288263fe927019060",
     "src/components/kit/Placeholder.tsx": "813545081fefa99fee255d6438d9d8219945794b581078d6d227c3e5ea1280b0",
     "src/components/kit/Prose.tsx": "925e590400df48c9b155faa3cf9d5f610bfa755b9677f2a2730f6e39725490be",
     "src/components/kit/Reveal.tsx": "e53dd820e734f6763fc6352ed7e51c406de0a5ef598b9c4a95a8ee967de11168",
@@ -571,7 +542,7 @@
     "src/components/kit/Stats.tsx": "9071f61ffc91ee753afb378ff67d3b32edfa18900ddb8b94a928ba18d1ce13f5",
     "src/components/kit/Story.tsx": "a37c2690bc7dfac145c83fc12121c26cf80cf98ad9718e245321505674a33a69",
     "src/components/kit/Testimonials.tsx": "d854a6f04ceb42f38d67a6fe0bef6c2725f0875810b63c668c7f85e80b151842",
-    "src/components/kit/index.ts": "92a2461accab436dd2da2e97e8e54641dc996a7f5db4ac9d9a7b1e609e8c36cd",
+    "src/components/kit/index.ts": "8a64aa6cf9249eb5d2eced2e1290a52db571cf27666e774940e3f99fa98858ee",
     "src/components/store/AddToCart.tsx": "6e21851a3ebf4dda83d2730d5510cef5d809d72873311301c2537a234479dfca",
     "src/components/store/BuyBox.tsx": "510d1e56a2bf2ef15971897b91cb2876126d3468c24d5d13f9c42b47961de008",
     "src/components/store/CartLink.tsx": "32e6063cd2c16d268425a843da72d00ad986b5c4e7dc3636c93add897e2af2cf",
@@ -596,23 +567,23 @@
     "src/middleware.ts": "8cf5a1c11e1d127c8b4b5ad52f3e7d4f1e43eb2f641d5728346c860f8d09186a",
     "tailwind.config.ts": "602d44f352dc503e122bfee252d1bbd981572c32b433e386c7875138d465ae91",
     "src/config/site.ts": "0289f42b2882ca92f2b3396791cdbbc8562c4f1316b12b68b58a80f22d1d5c60",
-    "src/app/globals.css": "7e8d2b23a34d5623747edb3c5d4481ffb30acce4d130ad249f5ad98b5d170527",
+    "src/app/globals.css": "df399ff6b260af8d416edb80b0a293cfa36f5b6540eb2109c7b0f7b6e11f2226",
     "src/lib/fonts.ts": "168e57bddb9aded9f550a3d0ea8fa0f5b6fce3e04e3eb53550dcb822ba56a39d",
-    "src/app/layout.tsx": "c80086c3a837355020c4606ba7b615096387241a15708eecb846e8224c49c304",
+    "src/app/layout.tsx": "a3a4336a99544557210a021ef8e1fa5efc5dbc604cccc6f95c20e2429731d7f5",
     "next.config.ts": "e67a4bc0e18777c8c1e72e02e9d61c70da338d52f428a2d0837939e5ece86685",
     "src/lib/site-routes.ts": "438742315fb24cae9eb7e57ddc017a4abfff023fbb8333260cbfc005a1da029c",
-    "src/app/llms.txt/route.ts": "fb8311623c4fb0c8ad3407441b4d2f02fd47765f13a59e190620a11976087e12",
+    "src/app/llms.txt/route.ts": "6f6c963f5e512a291ed7b5d5a55dc5d742b209a263a7d7e2d33271ab9d752766",
     "src/app/icon.svg": "1ae53e5476ccaa9d74f0eec6bbe76b7096d6efaf2a06bc9d8ec3b3d9162c040d",
-    "docs/DESIGN-SPEC.md": "928d56d4b50bbd3b81c8b60b9ed61a7561f5988dd964f28ea48c17f208994405",
-    "docs/ASSET-DEBT.md": "bc75d345b449750bc548ac1ea9da32d0929ad592b0e173035b7321962e2dc95f",
+    "docs/DESIGN-SPEC.md": "d215156aa5cfd5222642c463a20ea18cc4f7bf103ded75849a4df1abc0cc7e80",
+    "docs/ASSET-DEBT.md": "c2e16dfcba5e3a9c95620228c977410217b7aad0eeb1271f121a7e3b4f5ea465",
     "src/app/shop/[category]/page.tsx": "29607c35c84d36c803d7af6bae3bf8cf8d54d8c865f5f525f4ab51bc58997a44",
     "src/app/products/[slug]/page.tsx": "835971de0fee990e91e1a4604ae9e7bfedd6a2e73d363f0983acda134ecc293c",
     "src/app/cart/page.tsx": "3497525229cd756b4535cf96dd326c72ebd2844ad7bcc9e75a9359770e8989e2",
-    "src/app/page.tsx": "b709f50df0948a2cbdb129ba9f867074b06655d751add4fb51f8a5a715984132",
+    "src/app/page.tsx": "e6eb1a0ab6101e2406f97372e4aa90aea3bb9f2cfc4544b0b3b4757ef37618f3",
     "src/app/shop/page.tsx": "e56d7bf849ec059654051cf2cae3183941c480b96f329b2202f995aaba160938",
-    "src/app/the-bottle/page.tsx": "613bc5aeb30e4d3957bbe265a5e705628d4a4de334875628bbe1403fb0c30acf",
+    "src/app/the-bottle/page.tsx": "3e12664fe5409e7957d39f0ec7c2b4bb0a64445c62f9bd0fa782e29e1ae924b2",
     "src/app/about/page.tsx": "17a0a8686266e93fcc327363ab13a46cc776e458ec7dd51cb2d814b132ba11ae",
-    "src/app/faq/page.tsx": "6daf21a5df73d81903551bd3b03f1e93476cd30536865bb2ed629062a43b200a",
+    "src/app/faq/page.tsx": "19c3d2f843e922151e41eca2e54b50f2880d637a90ae5519d9ce4c23c4cce3bb",
     "src/app/contact/page.tsx": "30a454170f6d73fe8d805d0194227afb86f23d32e57f3babf8b48f7cf8e1efa1",
     "src/app/privacy/page.tsx": "6bb00bdc35dd8f6f2813413beb5f089136a026eec97d065daf98b30e69730b2b",
     "src/app/terms/page.tsx": "275b1a1559f9b72905f85287871fd6c2897180f9554160f86e9cc7198dc084df"

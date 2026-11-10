@@ -3,8 +3,9 @@ import { Placeholder, type ImageBrief } from './Placeholder';
 
 export interface HeroProps {
   /** split: copy left, media right · centered: copy centred, no media ·
-   *  editorial: oversized headline, facts strip · stacked: copy over media */
-  variant: 'split' | 'centered' | 'editorial' | 'stacked';
+   *  editorial: oversized headline, facts strip · stacked: copy over media ·
+   *  immersive: full-bleed photo, copy set on it (the luxury style's home hero) */
+  variant: 'split' | 'centered' | 'editorial' | 'stacked' | 'immersive';
   eyebrow?: string;
   headline: string;
   sub?: string;
@@ -53,6 +54,36 @@ function Facts({ facts, center }: { facts?: string[]; center?: boolean }) {
 
 export function Hero(props: HeroProps) {
   const { variant, eyebrow, headline, sub, image } = props;
+
+  // Full-bleed photo with the copy on a bottom scrim. The frame has a fixed
+  // height (svh) so the photo never shifts layout (CLS law); the photo loads
+  // eagerly at high priority (LCP law); the scrim keeps text at AA contrast.
+  if (variant === 'immersive' && image) {
+    return (
+      <section className="hero-immersive on-dark relative isolate overflow-hidden">
+        <Placeholder
+          image={image}
+          priority
+          className="absolute inset-0 -z-10 aspect-auto h-full w-full rounded-none"
+        />
+        <div className="hero-immersive-scrim absolute inset-0 -z-10" aria-hidden />
+        <div className="container-x flex min-h-[86svh] flex-col justify-end pb-16 pt-40 md:pb-24">
+          <div className="max-w-3xl">
+            {eyebrow ? <p className="eyebrow reveal">{eyebrow}</p> : null}
+            <h1 className="tt-display reveal" style={{ animationDelay: '80ms' }}>
+              {headline}
+            </h1>
+            {sub ? (
+              <p className="lead reveal mt-6" style={{ animationDelay: '140ms' }}>
+                {sub}
+              </p>
+            ) : null}
+            <Ctas {...props} />
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   if (variant === 'centered') {
     return (

@@ -1,6 +1,6 @@
 import { pageMetadata } from '@/lib/seo';
-import { CtaBand, Hero, JsonLd, Stats, Story } from '@/components/kit';
-import type { CtaBandProps, HeroProps, StatsProps, StoryProps } from '@/components/kit';
+import { CtaBand, Hero, JsonLd, Story } from '@/components/kit';
+import type { CtaBandProps, HeroProps, StoryProps } from '@/components/kit';
 import { organizationLd, websiteLd } from '@/lib/schema';
 
 export const metadata = pageMetadata({
@@ -14,7 +14,7 @@ export default function Page() {
     <>
       <JsonLd nodes={[organizationLd("Store"), websiteLd()]} />
       <Hero {...({
-        "variant": "editorial",
+        "variant": "immersive",
         "eyebrow": "Sampéa · Not yet launched",
         "headline": "Every bottle 30 ml. Every scent 40% perfume oil.",
         "sub": "Sampéa is a perfume house that hasn't launched yet. Our first bottle is in the shop, with a launch list where the price will be.",
@@ -27,8 +27,8 @@ export default function Page() {
           "href": "/the-bottle"
         },
         "image": {
-          "alt": "The Sampéa bottle in clear glass with a polished gold crown cap, on a cream ground",
-          "brief": "Customer's own photo of the Sampéa bottle, straight on, on a plain cream ground in soft daylight. Show the whole rectangular clear glass, the heavy base, the gold crown cap and the gold SAMPÉA wordmark with the lotus. No props, no people, no scent colour styling.",
+          "alt": "The Sampéa bottle in clear glass with the gold SAMPÉA wordmark and lotus, and a gold cap, on a cream ground",
+          "brief": "Customer's own photo of the Sampéa bottle, straight on, on a plain cream ground in soft daylight. Show the whole rectangular clear glass, the heavy base, the gold peaked cap and the gold SAMPÉA wordmark with the lotus. No props, no people, no scent colour styling.",
           "aspect": "portrait",
           "src": "https://website-api.tyashin.com/api/v1/public/media/media/6af1ee7a2976dd881e839d60/de9c052e5fe49daf61a71522b3b3761958b5d7931cd249c0511198f7304fa76d.jpg",
           "focus": "right"
@@ -39,29 +39,24 @@ export default function Page() {
           "Launching in Canada and the US"
         ]
       } satisfies HeroProps)} />
-      <Stats {...({
-        "eyebrow": "In every bottle",
-        "headline": "Two things are already settled",
-        "items": [
-          {
-            "value": "30 ml",
-            "label": "In every bottle"
-          },
-          {
-            "value": "40%",
-            "label": "Perfume oil in every scent"
-          }
-        ],
-        "dark": true
-      } satisfies StatsProps)} />
       <Story {...({
         "variant": "stacked",
         "eyebrow": "The bottle",
-        "headline": "Clear glass, a heavy base, a gold crown",
+        "headline": "The gold wordmark, the lotus, and a gold cap",
         "paragraphs": [
-          "Each bottle is rectangular clear glass on a heavy base, with a spray pump and a polished gold crown cap. It carries the SAMPÉA wordmark in gold, with a lotus."
+          "Each bottle carries the SAMPÉA wordmark in gold, with a lotus. It's rectangular clear glass on a heavy base, with a spray pump and a gold cap."
         ],
-        "imageSide": "right"
+        "imageSide": "right",
+        "facts": [
+          {
+            "label": "In every bottle",
+            "value": "30 ml"
+          },
+          {
+            "label": "Perfume oil in every scent",
+            "value": "40%"
+          }
+        ]
       } satisfies StoryProps)} />
       <CtaBand {...({
         "eyebrow": "Not yet launched",

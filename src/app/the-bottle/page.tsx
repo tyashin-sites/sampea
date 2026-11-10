@@ -5,7 +5,7 @@ import { organizationLd, websiteLd, breadcrumbLd } from '@/lib/schema';
 
 export const metadata = pageMetadata({
   title: "The Bottle",
-  description: "Rectangular clear glass on a heavy base, a spray pump, a polished gold crown cap and the gold SAMPÉA wordmark with a lotus. 30 ml in every bottle.",
+  description: "The gold SAMPÉA wordmark and lotus, rectangular clear glass on a heavy base, a spray pump and a gold cap. 30 ml in every bottle.",
   path: "/the-bottle",
 });
 
@@ -49,30 +49,6 @@ export default function Page() {
       } satisfies StoryProps)} />
       <Story {...({
         "variant": "split",
-        "eyebrow": "The cap",
-        "headline": "A spray pump under a gold crown",
-        "paragraphs": [
-          "The cap is a polished gold crown. Beneath it is a spray pump."
-        ],
-        "image": {
-          "alt": "Close view of the polished gold crown cap",
-          "brief": "Customer's own close-up of the polished gold crown cap on the bottle, against cream. Keep the reflections clean and the shot still. No hands.",
-          "aspect": "square"
-        },
-        "imageSide": "left",
-        "facts": [
-          {
-            "label": "Cap",
-            "value": "Polished gold crown"
-          },
-          {
-            "label": "Closure",
-            "value": "Spray pump"
-          }
-        ]
-      } satisfies StoryProps)} />
-      <Story {...({
-        "variant": "split",
         "eyebrow": "The mark",
         "headline": "SAMPÉA in gold, with a lotus",
         "paragraphs": [
@@ -80,7 +56,7 @@ export default function Page() {
           "Inside, every bottle holds 30 ml, and every scent is 40% perfume oil."
         ],
         "image": {
-          "alt": "The gold SAMPÉA wordmark and lotus on the clear glass bottle",
+          "alt": "The gold SAMPÉA wordmark and lotus on the clear glass bottle, with the gold cap",
           "brief": "Customer's own detail photo of the gold SAMPÉA wordmark and lotus on the clear glass, sharp focus on the gold, cream ground behind. No props.",
           "aspect": "landscape",
           "src": "https://website-api.tyashin.com/api/v1/public/media/media/6af1ee7a2976dd881e839d60/7f2be30fa1e6a6e40ead38014f10b72df35ba0c5e8ffe57c951d3028c7276873.jpg"

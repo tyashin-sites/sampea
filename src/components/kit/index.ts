@@ -8,6 +8,7 @@ export { CtaBand, type CtaBandProps } from './CtaBand';
 export { Contact, type ContactProps } from './Contact';
 export { Gallery, type GalleryProps } from './Gallery';
 export { Prose, type ProseProps } from './Prose';
+export { Model3d, type Model3dProps } from './Model3d';
 export { Breadcrumbs } from './Breadcrumbs';
 export { JsonLd } from './JsonLd';
 export { Placeholder, type ImageBrief } from './Placeholder';

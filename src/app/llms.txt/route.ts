@@ -18,7 +18,7 @@ const PAGES: { label: string; path: string; description: string }[] = [
   {
     "label": "The Bottle",
     "path": "/the-bottle",
-    "description": "Rectangular clear glass on a heavy base, a spray pump, a polished gold crown cap and the gold SAMPÉA wordmark with a lotus. 30 ml in every bottle."
+    "description": "The gold SAMPÉA wordmark and lotus, rectangular clear glass on a heavy base, a spray pump and a gold cap. 30 ml in every bottle."
   },
   {
     "label": "About",

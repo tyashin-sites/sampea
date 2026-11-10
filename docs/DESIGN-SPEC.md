@@ -23,9 +23,8 @@ ecommerce · Perfume house
 ### Home — `/`
 Sampéa is a perfume house that has not launched yet. Every bottle is 30 ml and every scent is 40% perfume oil. Join the launch list in our shop.
 
-- **hero** (editorial): Every bottle 30 ml. Every scent 40% perfume oil.
-- **stats**: Two things are already settled
-- **story** (stacked): Clear glass, a heavy base, a gold crown
+- **hero** (immersive): Every bottle 30 ml. Every scent 40% perfume oil.
+- **story** (stacked): The gold wordmark, the lotus, and a gold cap
 - **cta**: Be among the first to hear
 
 ### Shop — `/shop`
@@ -35,10 +34,9 @@ Sampéa's first bottle: 30 ml, 40% perfume oil. Prices aren't public yet, so the
 - **cta**: Something we haven't answered?
 
 ### The Bottle — `/the-bottle`
-Rectangular clear glass on a heavy base, a spray pump, a polished gold crown cap and the gold SAMPÉA wordmark with a lotus. 30 ml in every bottle.
+The gold SAMPÉA wordmark and lotus, rectangular clear glass on a heavy base, a spray pump and a gold cap. 30 ml in every bottle.
 
 - **story** (split): Rectangular, clear, on a heavy base
-- **story** (split): A spray pump under a gold crown
 - **story** (split): SAMPÉA in gold, with a lotus
 - **cta**: The bottle is waiting in the shop
 

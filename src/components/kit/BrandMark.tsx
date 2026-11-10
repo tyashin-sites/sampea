@@ -3,7 +3,7 @@ import { getBrandKit, lightLogo } from '@/lib/brand-kit';
 
 /**
  * The header's brand mark. Brand-kit logo first (changes in the Tyashin admin
- * appear without a rebuild); the monogram + name is only the fallback for a
+ * appear without a rebuild); the name set as a wordmark in the display font is the fallback for a
  * project with no logo uploaded. Platform-owned (Website Studio kit).
  */
 export async function BrandMark() {
@@ -20,15 +20,8 @@ export async function BrandMark() {
       />
     );
   }
-  return (
-    <>
-      <span
-        className="bg-primary text-primary-contrast inline-flex h-8 w-8 items-center justify-center rounded-md text-sm"
-        aria-hidden
-      >
-        {siteConfig.shortName.charAt(0)}
-      </span>
-      <span>{siteConfig.shortName}</span>
-    </>
-  );
+  // No logo: the name set as a wordmark in the display face. Never a
+  // monogram-in-a-square placeholder (Sampéa 2026-11-10: it read as a
+  // template, not a brand).
+  return <span className="brand-wordmark">{siteConfig.name}</span>;
 }

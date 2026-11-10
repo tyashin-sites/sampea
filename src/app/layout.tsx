@@ -87,7 +87,7 @@ const FOOTER = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${bodyFont.variable} ${headingFont.variable} ${monoFont.variable}`}>
+    <html lang="en" data-style="luxury" className={`${bodyFont.variable} ${headingFont.variable} ${monoFont.variable}`}>
       <head>
         <style dangerouslySetInnerHTML={{ __html: FIRST_FRAME_CSS }} />
         {/* Brand kit first: the customer's Tyashin colours over this palette. */}
