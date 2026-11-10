@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "savedAt": "2026-11-10T09:12:51.132Z",
+  "savedAt": "2026-11-10T09:22:59.654Z",
   "spec": {
     "brand": {
       "name": "Sampéa",
@@ -155,7 +155,8 @@
               "alt": "Front of the Sampéa bottle with the gold wordmark and the lotus",
               "brief": "Supplied file site_v2_wordmark: the front of the bottle, square to camera, the gold SAMPÉA wordmark and the lotus in sharp focus. Keep the cap in frame but not as the subject.",
               "aspect": "portrait",
-              "src": "https://website-api.tyashin.com/api/v1/public/media/media/6af1ee7a2976dd881e839d60/7f2be30fa1e6a6e40ead38014f10b72df35ba0c5e8ffe57c951d3028c7276873.jpg"
+              "src": "https://website-api.tyashin.com/api/v1/public/media/media/6af1ee7a2976dd881e839d60/7f2be30fa1e6a6e40ead38014f10b72df35ba0c5e8ffe57c951d3028c7276873.jpg",
+              "focus": "bottom"
             },
             "imageSide": "right"
           },
@@ -594,7 +595,7 @@
     "src/app/cart/page.tsx": "3497525229cd756b4535cf96dd326c72ebd2844ad7bcc9e75a9359770e8989e2",
     "src/app/page.tsx": "a35ce1b7ed5512772436798e2d27616129db459741a53ef75cc895c83c691871",
     "src/app/shop/page.tsx": "91944aa9353022f3c015192065da89ccd329f64ac46f8d63b63d03bd3e97b0be",
-    "src/app/the-bottle/page.tsx": "dfe9dc27521ac2941c34f27bd25d915939772cc2c9d0aed3d55c814dfbd4a2eb",
+    "src/app/the-bottle/page.tsx": "445f5d5d2ad5b6bd92f459fc47ec4053963f8d609ee5a15db4ac513a6bda1e9c",
     "src/app/about/page.tsx": "701c8c745ea3196bba3f78314ee856b632592fa268087f78f3d33d424f4cd2c3",
     "src/app/faq/page.tsx": "07530f175b2f57f196a8d3c54d07e437737e97c35d63e82ae7233b9d54f85f43",
     "src/app/contact/page.tsx": "1b394b6aa4007e274adfd5930170a70f40a1c1f70eef2076ec9b92bf7692ec84",

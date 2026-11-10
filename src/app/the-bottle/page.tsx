@@ -33,7 +33,8 @@ export default function Page() {
           "alt": "Front of the Sampéa bottle with the gold wordmark and the lotus",
           "brief": "Supplied file site_v2_wordmark: the front of the bottle, square to camera, the gold SAMPÉA wordmark and the lotus in sharp focus. Keep the cap in frame but not as the subject.",
           "aspect": "portrait",
-          "src": "https://website-api.tyashin.com/api/v1/public/media/media/6af1ee7a2976dd881e839d60/7f2be30fa1e6a6e40ead38014f10b72df35ba0c5e8ffe57c951d3028c7276873.jpg"
+          "src": "https://website-api.tyashin.com/api/v1/public/media/media/6af1ee7a2976dd881e839d60/7f2be30fa1e6a6e40ead38014f10b72df35ba0c5e8ffe57c951d3028c7276873.jpg",
+          "focus": "bottom"
         },
         "imageSide": "right"
       } satisfies StoryProps)} />
