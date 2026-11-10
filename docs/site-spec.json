@@ -1,12 +1,12 @@
 {
   "version": 1,
-  "savedAt": "2026-11-10T01:40:23.773Z",
+  "savedAt": "2026-11-10T02:12:52.834Z",
   "spec": {
     "brand": {
       "name": "Sampéa",
       "shortName": "Sampéa",
       "tagline": "",
-      "description": "Sampéa is a perfume house that has not launched yet. Every bottle is 30 ml and every scent is 40% perfume oil. Launching in India, Canada and the US.",
+      "description": "Sampéa is a perfume house that has not launched yet. Every bottle is 30 ml and every scent is 40% perfume oil. Launching in Canada and the US.",
       "voice": "Quiet, exact and unhurried. Short sentences and plain words. Sampéa says only what it knows: the bottle, 30 ml, 40% perfume oil, not yet launched. It never fills a gap with a claim."
     },
     "design": {
@@ -56,7 +56,7 @@
             "facts": [
               "30 ml bottle",
               "40% perfume oil",
-              "Launching in India, Canada and the US"
+              "Launching in Canada and the US"
             ]
           },
           {
@@ -242,7 +242,7 @@
         "path": "/about",
         "label": "About",
         "title": "About",
-        "description": "Sampéa is a perfume house launching in India, Canada and the US. Every bottle is 30 ml and every scent is 40% perfume oil. Not yet launched.",
+        "description": "Sampéa is a perfume house launching in Canada and the US. Every bottle is 30 ml and every scent is 40% perfume oil. Not yet launched.",
         "heading": "About Sampéa",
         "inNav": true,
         "sections": [
@@ -254,7 +254,7 @@
             "paragraphs": [
               "Sampéa is a perfume house. We haven't launched, and our scent names, notes, prices and launch date aren't public yet.",
               "Two things are settled. Every bottle holds 30 ml. Every scent is 40% perfume oil.",
-              "We're launching in India, Canada and the US."
+              "Launching in Canada and the US."
             ],
             "imageSide": "right"
           },
@@ -293,7 +293,7 @@
               },
               {
                 "q": "Where will Sampéa launch?",
-                "a": "In India, Canada and the US."
+                "a": "In Canada and the US."
               },
               {
                 "q": "How big is a bottle?",
@@ -341,7 +341,7 @@
         "path": "/contact",
         "label": "Contact",
         "title": "Contact",
-        "description": "Write to Sampéa at contact@houseofsampea.com. We're a perfume house that hasn't launched yet, launching in India, Canada and the US.",
+        "description": "Write to Sampéa at contact@houseofsampea.com. We're a perfume house that hasn't launched yet, launching in Canada and the US.",
         "heading": "Contact",
         "inNav": true,
         "sections": [
@@ -465,7 +465,7 @@
       }
     ],
     "footer": {
-      "blurb": "Sampéa is a perfume house, not yet launched. Launching in India, Canada and the US.",
+      "blurb": "Sampéa is a perfume house, not yet launched. Launching in Canada and the US.",
       "columns": [
         {
           "heading": "Shop",
@@ -595,25 +595,25 @@
     "src/lib/utils.ts": "9304a861c8673bee09e0f12de31773abbde503b02e59dfd74763ddec2e37cf05",
     "src/middleware.ts": "8cf5a1c11e1d127c8b4b5ad52f3e7d4f1e43eb2f641d5728346c860f8d09186a",
     "tailwind.config.ts": "602d44f352dc503e122bfee252d1bbd981572c32b433e386c7875138d465ae91",
-    "src/config/site.ts": "b2b429f0186161ad5a3679dff4062e143ebe2c3b3dc6c27192b4e4c593e7d5ba",
+    "src/config/site.ts": "0289f42b2882ca92f2b3396791cdbbc8562c4f1316b12b68b58a80f22d1d5c60",
     "src/app/globals.css": "7e8d2b23a34d5623747edb3c5d4481ffb30acce4d130ad249f5ad98b5d170527",
     "src/lib/fonts.ts": "168e57bddb9aded9f550a3d0ea8fa0f5b6fce3e04e3eb53550dcb822ba56a39d",
-    "src/app/layout.tsx": "bae21221acf78deb35047454ed6c6f794484837d08ae58f114524ece8514459b",
+    "src/app/layout.tsx": "c80086c3a837355020c4606ba7b615096387241a15708eecb846e8224c49c304",
     "next.config.ts": "e67a4bc0e18777c8c1e72e02e9d61c70da338d52f428a2d0837939e5ece86685",
     "src/lib/site-routes.ts": "438742315fb24cae9eb7e57ddc017a4abfff023fbb8333260cbfc005a1da029c",
-    "src/app/llms.txt/route.ts": "2dea6d7644cf8034186942c5afc97d8921f714d708e4bcdd6ce12bc645b3f21b",
+    "src/app/llms.txt/route.ts": "fb8311623c4fb0c8ad3407441b4d2f02fd47765f13a59e190620a11976087e12",
     "src/app/icon.svg": "1ae53e5476ccaa9d74f0eec6bbe76b7096d6efaf2a06bc9d8ec3b3d9162c040d",
-    "docs/DESIGN-SPEC.md": "49f1d3d5452c775ea117abf79dd83dcdc14697c330d2b091e04edb0651d09476",
+    "docs/DESIGN-SPEC.md": "928d56d4b50bbd3b81c8b60b9ed61a7561f5988dd964f28ea48c17f208994405",
     "docs/ASSET-DEBT.md": "bc75d345b449750bc548ac1ea9da32d0929ad592b0e173035b7321962e2dc95f",
     "src/app/shop/[category]/page.tsx": "29607c35c84d36c803d7af6bae3bf8cf8d54d8c865f5f525f4ab51bc58997a44",
     "src/app/products/[slug]/page.tsx": "835971de0fee990e91e1a4604ae9e7bfedd6a2e73d363f0983acda134ecc293c",
     "src/app/cart/page.tsx": "3497525229cd756b4535cf96dd326c72ebd2844ad7bcc9e75a9359770e8989e2",
-    "src/app/page.tsx": "6d754d9facc7cc6de6a8854eaab20c1cf107823ad745a3f1a8f6a757be9ddc2f",
+    "src/app/page.tsx": "b709f50df0948a2cbdb129ba9f867074b06655d751add4fb51f8a5a715984132",
     "src/app/shop/page.tsx": "e56d7bf849ec059654051cf2cae3183941c480b96f329b2202f995aaba160938",
     "src/app/the-bottle/page.tsx": "613bc5aeb30e4d3957bbe265a5e705628d4a4de334875628bbe1403fb0c30acf",
-    "src/app/about/page.tsx": "94843486238336c3cd175a1973c21ac20dc0fae363d5b74715a0d6b1e07f74a6",
-    "src/app/faq/page.tsx": "20eb33d6d9d64d582135502b59cee1e0888ba4c35c3940a68f429349c6097af3",
-    "src/app/contact/page.tsx": "e0f79f5f6cf28e09f4b33853692bd4fc47e2a4dddee1244f3e916558ac77ecde",
+    "src/app/about/page.tsx": "17a0a8686266e93fcc327363ab13a46cc776e458ec7dd51cb2d814b132ba11ae",
+    "src/app/faq/page.tsx": "6daf21a5df73d81903551bd3b03f1e93476cd30536865bb2ed629062a43b200a",
+    "src/app/contact/page.tsx": "30a454170f6d73fe8d805d0194227afb86f23d32e57f3babf8b48f7cf8e1efa1",
     "src/app/privacy/page.tsx": "6bb00bdc35dd8f6f2813413beb5f089136a026eec97d065daf98b30e69730b2b",
     "src/app/terms/page.tsx": "275b1a1559f9b72905f85287871fd6c2897180f9554160f86e9cc7198dc084df"
   }

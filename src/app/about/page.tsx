@@ -5,7 +5,7 @@ import { organizationLd, websiteLd, breadcrumbLd } from '@/lib/schema';
 
 export const metadata = pageMetadata({
   title: "About",
-  description: "Sampéa is a perfume house launching in India, Canada and the US. Every bottle is 30 ml and every scent is 40% perfume oil. Not yet launched.",
+  description: "Sampéa is a perfume house launching in Canada and the US. Every bottle is 30 ml and every scent is 40% perfume oil. Not yet launched.",
   path: "/about",
 });
 
@@ -28,7 +28,7 @@ export default function Page() {
         "paragraphs": [
           "Sampéa is a perfume house. We haven't launched, and our scent names, notes, prices and launch date aren't public yet.",
           "Two things are settled. Every bottle holds 30 ml. Every scent is 40% perfume oil.",
-          "We're launching in India, Canada and the US."
+          "Launching in Canada and the US."
         ],
         "imageSide": "right"
       } satisfies StoryProps)} />

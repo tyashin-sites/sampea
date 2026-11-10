@@ -23,7 +23,7 @@ const PAGES: { label: string; path: string; description: string }[] = [
   {
     "label": "About",
     "path": "/about",
-    "description": "Sampéa is a perfume house launching in India, Canada and the US. Every bottle is 30 ml and every scent is 40% perfume oil. Not yet launched."
+    "description": "Sampéa is a perfume house launching in Canada and the US. Every bottle is 30 ml and every scent is 40% perfume oil. Not yet launched."
   },
   {
     "label": "FAQ",
@@ -33,7 +33,7 @@ const PAGES: { label: string; path: string; description: string }[] = [
   {
     "label": "Contact",
     "path": "/contact",
-    "description": "Write to Sampéa at contact@houseofsampea.com. We're a perfume house that hasn't launched yet, launching in India, Canada and the US."
+    "description": "Write to Sampéa at contact@houseofsampea.com. We're a perfume house that hasn't launched yet, launching in Canada and the US."
   }
 ];
 

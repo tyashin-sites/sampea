@@ -9,7 +9,7 @@ export const siteConfig: SiteConfig = {
   "name": "Sampéa",
   "shortName": "Sampéa",
   "tagline": "",
-  "description": "Sampéa is a perfume house that has not launched yet. Every bottle is 30 ml and every scent is 40% perfume oil. Launching in India, Canada and the US.",
+  "description": "Sampéa is a perfume house that has not launched yet. Every bottle is 30 ml and every scent is 40% perfume oil. Launching in Canada and the US.",
   "domain": "sampea.sites.tyashin.com",
   "locale": "en_US",
   "language": "en",

@@ -42,7 +42,7 @@ html:root[data-theme="dark"], html:root[data-theme="dark"] body { background-col
 `;
 
 const FOOTER = {
-  "blurb": "Sampéa is a perfume house, not yet launched. Launching in India, Canada and the US.",
+  "blurb": "Sampéa is a perfume house, not yet launched. Launching in Canada and the US.",
   "columns": [
     {
       "heading": "Shop",

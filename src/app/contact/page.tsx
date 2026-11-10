@@ -5,7 +5,7 @@ import { organizationLd, websiteLd, breadcrumbLd } from '@/lib/schema';
 
 export const metadata = pageMetadata({
   title: "Contact",
-  description: "Write to Sampéa at contact@houseofsampea.com. We're a perfume house that hasn't launched yet, launching in India, Canada and the US.",
+  description: "Write to Sampéa at contact@houseofsampea.com. We're a perfume house that hasn't launched yet, launching in Canada and the US.",
   path: "/contact",
 });
 

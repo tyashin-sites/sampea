@@ -36,7 +36,7 @@ export default function Page() {
         "facts": [
           "30 ml bottle",
           "40% perfume oil",
-          "Launching in India, Canada and the US"
+          "Launching in Canada and the US"
         ]
       } satisfies HeroProps)} />
       <Stats {...({
