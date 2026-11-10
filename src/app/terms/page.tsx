@@ -5,7 +5,7 @@ import { organizationLd, websiteLd, breadcrumbLd } from '@/lib/schema';
 
 export const metadata = pageMetadata({
   title: "Terms of Use",
-  description: "The terms that apply when you use the Sampéa website. Nothing is for sale on this site yet; it shares information about a perfume house before launch.",
+  description: "The terms for using the Sampéa website and shop, including the launch list, product information before launch, and how to contact us.",
   path: "/terms",
 });
 
@@ -14,47 +14,35 @@ const CRUMBS = [{"name":"Home","path":"/"},{"name":"Terms","path":"/terms"}];
 export default function Page() {
   return (
     <>
-      <JsonLd nodes={[organizationLd("Organization"), websiteLd(), breadcrumbLd(CRUMBS)]} />
+      <JsonLd nodes={[organizationLd("Store"), websiteLd(), breadcrumbLd(CRUMBS)]} />
       <Breadcrumbs items={CRUMBS} />
       <Prose {...({
         "eyebrow": "Legal",
-        "headline": "Terms of Use",
-        "intro": "These terms apply when you use the Sampéa website. By using the site, you agree to them.",
+        "headline": "Terms of use",
+        "intro": "These terms apply when you use the Sampéa website and shop. By using the site, you agree to them.",
         "blocks": [
           {
-            "heading": "About this site",
+            "heading": "Before launch",
             "paragraphs": [
-              "This website shares information about Sampéa, a perfume house that has not launched yet. Nothing is offered for sale here, and nothing on this site is an offer to sell."
+              "Sampéa has not launched. Products shown on this site can't be bought yet, and scent names, notes, prices and the launch date aren't public. Joining the launch list doesn't reserve a product or commit you to buying one."
             ]
           },
           {
-            "heading": "Information may change",
+            "heading": "Orders",
             "paragraphs": [
-              "We try to keep the information on this site accurate, but details may change before and after launch. We may update or remove content at any time without notice."
+              "When sales open, prices and order terms will be shown in the shop and at checkout before you pay."
             ]
           },
           {
             "heading": "Our content",
             "paragraphs": [
-              "The Sampéa name, text, design and other content on this site belong to Sampéa. Please do not copy or reuse them without our written permission."
+              "The text, images, the SAMPÉA wordmark and the lotus on this site belong to Sampéa. Please don't copy or reuse them without our permission."
             ]
           },
           {
-            "heading": "Using the site",
+            "heading": "Changes",
             "paragraphs": [
-              "Please use this site lawfully. Do not try to disrupt it, gain unauthorised access to it, or use it to send unsolicited messages."
-            ]
-          },
-          {
-            "heading": "Liability",
-            "paragraphs": [
-              "The site is provided as it is. To the extent the law allows, Sampéa is not liable for any loss arising from your use of the site or from relying on its content."
-            ]
-          },
-          {
-            "heading": "Changes to these terms",
-            "paragraphs": [
-              "We may update these terms from time to time. The current version is always the one on this page."
+              "We may update these terms. The current version is always the one on this page."
             ]
           },
           {

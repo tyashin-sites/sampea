@@ -3,6 +3,8 @@ import { siteConfig, PRIMARY_CTA } from '@/config/site';
 import { CtaLink } from './CtaLink';
 import { MobileNav } from './MobileNav';
 import { BrandMark } from './BrandMark';
+import { CartLink } from '@/components/store/CartLink';
+import { storeClientConfig } from '@/lib/commerce';
 
 export function Header() {
   return (
@@ -27,6 +29,7 @@ export function Header() {
           ))}
         </nav>
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
+          {siteConfig.commerce?.enabled ? <CartLink client={storeClientConfig()} /> : null}
           {PRIMARY_CTA ? <CtaLink cta={PRIMARY_CTA} className="hidden sm:inline-flex" /> : null}
           <MobileNav nav={siteConfig.nav} cta={PRIMARY_CTA} />
         </div>

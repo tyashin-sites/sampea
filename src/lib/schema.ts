@@ -62,3 +62,41 @@ export function faqLd(items: { q: string; a: string }[]) {
     })),
   };
 }
+
+/**
+ * Product node. The Offer (price) is added ONLY when the store can sell and the
+ * product has a price: a pre-launch product never advertises one.
+ */
+export function productLd(p: {
+  name: string;
+  description: string;
+  path: string;
+  images: string[];
+  sku?: string;
+  offer?: { price: string; currency: string; inStock: boolean };
+}) {
+  const url = `${SITE_URL}${p.path}`;
+  const node: Record<string, unknown> = {
+    '@type': 'Product',
+    '@id': `${url}#product`,
+    name: p.name,
+    url,
+    description: p.description,
+    brand: { '@type': 'Brand', name: siteConfig.name },
+  };
+  if (p.images.length) node.image = p.images;
+  if (p.sku) node.sku = p.sku;
+  if (p.offer) {
+    node.offers = {
+      '@type': 'Offer',
+      url,
+      price: p.offer.price,
+      priceCurrency: p.offer.currency,
+      availability: p.offer.inStock
+        ? 'https://schema.org/InStock'
+        : 'https://schema.org/OutOfStock',
+      seller: { '@id': ORG_ID },
+    };
+  }
+  return node;
+}

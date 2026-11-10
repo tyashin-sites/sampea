@@ -2,52 +2,50 @@ import { pageMetadata } from '@/lib/seo';
 import { CtaBand, Hero, JsonLd, Stats, Story } from '@/components/kit';
 import type { CtaBandProps, HeroProps, StatsProps, StoryProps } from '@/components/kit';
 import { organizationLd, websiteLd } from '@/lib/schema';
-import { BOTTLE_DETAIL, BOTTLE_FRONT, BOTTLE_HERO } from '@/config/media';
 
 export const metadata = pageMetadata({
   title: "Sampéa | A perfume house, not yet launched",
-  exactTitle: true,
-  description: "Sampéa is a perfume house that has not launched yet. Every bottle is 30 ml and every scent is 40% perfume oil. Write to us at contact@houseofsampea.com.",
+  description: "Sampéa is a perfume house that has not launched yet. Every bottle is 30 ml and every scent is 40% perfume oil. Join the launch list in our shop.",
   path: "/",
 });
 
 export default function Page() {
   return (
     <>
-      <JsonLd nodes={[organizationLd("Organization"), websiteLd()]} />
+      <JsonLd nodes={[organizationLd("Store"), websiteLd()]} />
       <Hero {...({
-        "variant": "split",
-        "eyebrow": "Perfume house · Not yet launched",
-        "headline": "A perfume house, still in the making",
-        "sub": "Sampéa has not launched yet. When it does, every bottle will be 30 ml and every scent will be 40% perfume oil.",
+        "variant": "editorial",
+        "eyebrow": "Sampéa · Not yet launched",
+        "headline": "Every bottle 30 ml. Every scent 40% perfume oil.",
+        "sub": "Sampéa is a perfume house that hasn't launched yet. Our first bottle is in the shop, with a launch list where the price will be.",
         "primaryCta": {
-          "label": "Write to us",
-          "href": "mailto:contact@houseofsampea.com"
+          "label": "Join the launch list",
+          "href": "/shop"
         },
         "secondaryCta": {
-          "label": "About the house",
-          "href": "/about"
+          "label": "See the bottle",
+          "href": "/the-bottle"
         },
         "image": {
-          "src": BOTTLE_HERO,
-          "alt": "The Sampéa bottle at a three-quarter angle: white glass with a gold cap and the Sampéa name in gold.",
-          "brief": "",
-          "aspect": "landscape",
-          "priority": true
+          "alt": "The Sampéa bottle in clear glass with a polished gold crown cap, on a cream ground",
+          "brief": "Customer's own photo of the Sampéa bottle, straight on, on a plain cream ground in soft daylight. Show the whole rectangular clear glass, the heavy base, the gold crown cap and the gold SAMPÉA wordmark with the lotus. No props, no people, no scent colour styling.",
+          "aspect": "portrait",
+          "src": "https://website-api.tyashin.com/api/v1/public/media/media/6af1ee7a2976dd881e839d60/de9c052e5fe49daf61a71522b3b3761958b5d7931cd249c0511198f7304fa76d.jpg",
+          "focus": "right"
         },
         "facts": [
-          "30 ml, every bottle",
-          "40% perfume oil, every scent",
+          "30 ml bottle",
+          "40% perfume oil",
           "Launching in India, Canada and the US"
         ]
       } satisfies HeroProps)} />
       <Stats {...({
-        "eyebrow": "Two numbers",
-        "headline": "Remember these",
+        "eyebrow": "In every bottle",
+        "headline": "Two things are already settled",
         "items": [
           {
             "value": "30 ml",
-            "label": "The size of every bottle"
+            "label": "In every bottle"
           },
           {
             "value": "40%",
@@ -57,50 +55,26 @@ export default function Page() {
         "dark": true
       } satisfies StatsProps)} />
       <Story {...({
-        "variant": "split",
-        "eyebrow": "One size, one strength",
-        "headline": "The only choice left is the scent",
+        "variant": "stacked",
+        "eyebrow": "The bottle",
+        "headline": "Clear glass, a heavy base, a gold crown",
         "paragraphs": [
-          "Each Sampéa scent is 40% perfume oil. Each bottle holds 30 ml. Both numbers stay the same across the whole house.",
-          "Names, notes and prices are not public yet. We'll share them when Sampéa launches."
+          "Each bottle is rectangular clear glass on a heavy base, with a spray pump and a polished gold crown cap. It carries the SAMPÉA wordmark in gold, with a lotus."
         ],
-        "image": {
-          "src": BOTTLE_DETAIL,
-          "alt": "Close view of the gold cap on the Sampéa bottle.",
-          "brief": "",
-          "aspect": "square"
-        },
-        "imageSide": "left"
-      } satisfies StoryProps)} />
-      <Story {...({
-        "variant": "split",
-        "eyebrow": "At launch",
-        "headline": "Your name on the bottle",
-        "paragraphs": [
-          "When Sampéa launches, you'll be able to put a name on a bottle. That name becomes its own Sampéa product, and nobody else can order it. Think of a number plate.",
-          "Nothing about the perfume changes. Still 30 ml, still 40% perfume oil. The name is the part that is only yours."
-        ],
-        "image": {
-          "src": BOTTLE_FRONT,
-          "alt": "The front of the Sampéa bottle, where a name would sit below the gold wordmark.",
-          "brief": "",
-          "aspect": "portrait"
-        },
         "imageSide": "right"
       } satisfies StoryProps)} />
       <CtaBand {...({
-        "eyebrow": "Before launch",
-        "headline": "Write to Sampéa",
-        "body": "Questions, press, or plain curiosity. There is one address for all of it.",
+        "eyebrow": "Not yet launched",
+        "headline": "Be among the first to hear",
+        "body": "Scent names, prices and the launch date aren't public yet. The launch list sits on the product page, where the price will be.",
         "primaryCta": {
-          "label": "Email contact@houseofsampea.com",
-          "href": "mailto:contact@houseofsampea.com"
+          "label": "Join the launch list",
+          "href": "/shop"
         },
         "secondaryCta": {
-          "label": "Contact page",
-          "href": "/contact"
-        },
-        "note": "There is no shop, waitlist or newsletter yet. Email is the way to reach us."
+          "label": "Write to us",
+          "href": "mailto:contact@houseofsampea.com"
+        }
       } satisfies CtaBandProps)} />
     </>
   );

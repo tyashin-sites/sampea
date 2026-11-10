@@ -1,20 +1,32 @@
-import Image from 'next/image';
-import { Camera } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export interface ImageBrief {
-  /** Alt text for the image. */
+  /** Alt text for the eventual real image. */
   alt: string;
-  /** What the customer should supply while `src` is empty (docs/ASSET-DEBT.md). */
+  /** What the customer should supply (recorded in docs/ASSET-DEBT.md). */
   brief: string;
   aspect: 'landscape' | 'portrait' | 'square' | 'wide';
-  /** The real image URL. Without it the slot stays a visible placeholder. */
+  /**
+   * The real photo, once the customer supplied it (a Tyashin media-library
+   * URL, set by the runner from an upload, never by a model). Absent = the
+   * tonal placeholder below.
+   */
   src?: string;
-  /** Set on the one above-the-fold image so it is not lazy-loaded (LCP). */
-  priority?: boolean;
-  /** Overrides the width guess derived from `aspect`. */
-  sizes?: string;
+  /**
+   * Where the photo's subject sits, so a crop into a narrower slot keeps it
+   * (a wide hero shot with the bottle on the right, shown in a portrait
+   * column, used to show only empty paper). Set by the runner with `src`.
+   */
+  focus?: 'center' | 'left' | 'right' | 'top' | 'bottom';
 }
+
+const FOCUS: Record<NonNullable<ImageBrief['focus']>, string> = {
+  center: 'object-center',
+  left: 'object-left',
+  right: 'object-right',
+  top: 'object-top',
+  bottom: 'object-bottom',
+};
 
 const ASPECT: Record<ImageBrief['aspect'], string> = {
   landscape: 'aspect-[4/3]',
@@ -23,46 +35,49 @@ const ASPECT: Record<ImageBrief['aspect'], string> = {
   wide: 'aspect-[16/9]',
 };
 
-/** Wide images span the container; the rest sit in a narrower column. */
-const SIZES: Record<ImageBrief['aspect'], string> = {
-  landscape: '(min-width: 1024px) 50vw, 100vw',
-  portrait: '(min-width: 1024px) 40vw, 100vw',
-  square: '(min-width: 1024px) 40vw, 100vw',
-  wide: '(min-width: 1024px) 80vw, 100vw',
-};
-
 /**
- * A media slot. With `src` it renders the real image; without one it shows
- * what belongs there, because the facts rule forbids inventing a photo.
- * The aspect box is fixed either way, so neither state shifts the layout.
+ * A media slot with no photo yet. The facts rule forbids fake photos, and a
+ * live site must not look unfinished either: until the customer supplies the
+ * real asset this renders a quiet tonal panel in the brand colours, with NO
+ * visible "photo to add" text (that shipped on the first real build,
+ * 2026-11-09). What belongs here is recorded in docs/ASSET-DEBT.md and kept
+ * on the element as data-asset-brief for the admin.
  */
-export function Placeholder({ image, className }: { image: ImageBrief; className?: string }) {
+export function Placeholder({
+  image,
+  className,
+  priority = false,
+}: {
+  image: ImageBrief;
+  className?: string;
+  /** Above-the-fold media (the hero): load eagerly, it is the LCP element. */
+  priority?: boolean;
+}) {
   if (image.src) {
     return (
-      <figure className={cn('media-frame', ASPECT[image.aspect], className)}>
-        <Image
+      <div className={cn('relative overflow-hidden', ASPECT[image.aspect], className)}>
+        {/* A plain img on purpose: library URLs are already optimised by the
+            platform's image service, and next/image would need a loader. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
           src={image.src}
           alt={image.alt}
-          fill
-          sizes={image.sizes ?? SIZES[image.aspect]}
-          className="object-cover"
-          priority={image.priority}
+          loading={priority ? 'eager' : 'lazy'}
+          fetchPriority={priority ? 'high' : undefined}
+          decoding="async"
+          className={cn(
+            'absolute inset-0 h-full w-full object-cover',
+            FOCUS[image.focus ?? 'center'] ?? 'object-center'
+          )}
         />
-      </figure>
+      </div>
     );
   }
   return (
-    <figure
+    <div
       className={cn('placeholder', ASPECT[image.aspect], className)}
-      role="img"
-      aria-label={image.alt}
-    >
-      <figcaption className="text-foreground/80 absolute inset-x-4 bottom-4 flex items-start gap-2 text-[13px] leading-snug">
-        <Camera className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
-        <span>
-          <span className="font-semibold">Photo to add:</span> {image.brief}
-        </span>
-      </figcaption>
-    </figure>
+      aria-hidden
+      data-asset-brief={image.brief || image.alt || undefined}
+    />
   );
 }

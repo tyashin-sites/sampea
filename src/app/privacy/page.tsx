@@ -5,7 +5,7 @@ import { organizationLd, websiteLd, breadcrumbLd } from '@/lib/schema';
 
 export const metadata = pageMetadata({
   title: "Privacy Policy",
-  description: "How Sampéa handles the personal information you share when you visit this website or write to us at contact@houseofsampea.com.",
+  description: "How Sampéa handles the personal details you share on this site, including your email address when you join the launch list or write to us.",
   path: "/privacy",
 });
 
@@ -14,53 +14,41 @@ const CRUMBS = [{"name":"Home","path":"/"},{"name":"Privacy","path":"/privacy"}]
 export default function Page() {
   return (
     <>
-      <JsonLd nodes={[organizationLd("Organization"), websiteLd(), breadcrumbLd(CRUMBS)]} />
+      <JsonLd nodes={[organizationLd("Store"), websiteLd(), breadcrumbLd(CRUMBS)]} />
       <Breadcrumbs items={CRUMBS} />
       <Prose {...({
         "eyebrow": "Legal",
-        "headline": "Privacy Policy",
-        "intro": "This policy explains how Sampéa handles personal information connected with this website. Sampéa has not launched yet, and this site does not sell anything or offer accounts, sign-ups or newsletters.",
+        "headline": "Privacy policy",
+        "intro": "This policy explains how Sampéa uses the personal details you give us through this website.",
         "blocks": [
           {
             "heading": "What we collect",
             "paragraphs": [
-              "If you email us at contact@houseofsampea.com, we receive your email address, your name if you include it, and whatever you write in your message.",
-              "Like most websites, our hosting provider may record standard technical information such as your IP address, browser type and the pages you view, to keep the site running and secure."
+              "We collect only what you choose to give us: your email address when you join the launch list, what you include when you write to contact@houseofsampea.com, and the details needed to complete an order once we start selling."
             ]
           },
           {
             "heading": "How we use it",
             "paragraphs": [
-              "We use what you send us to read and reply to your message. We use technical information only to operate and protect the website."
-            ],
-            "bullets": [
-              "We do not sell your personal information.",
-              "We do not share it with others for their marketing.",
-              "We do not add you to any mailing list."
+              "We use your email address to tell you about Sampéa's launch and to reply when you write to us. We use order details to process, deliver and support your order. We don't sell your personal details."
             ]
           },
           {
-            "heading": "How long we keep it",
+            "heading": "Who else handles it",
             "paragraphs": [
-              "We keep emails for as long as we need them to deal with your message, and then delete them unless we have a legal reason to keep them."
+              "This website and shop run on the Tyashin platform, which stores this information on our behalf. Payment details at checkout are handled by the payment provider, not kept by us."
             ]
           },
           {
             "heading": "Your choices",
             "paragraphs": [
-              "You can ask us what information we hold about you, ask us to correct it, or ask us to delete it. Write to contact@houseofsampea.com and we will respond."
+              "You can ask to see, correct or delete the details we hold about you, or leave the launch list, by writing to contact@houseofsampea.com."
             ]
           },
           {
             "heading": "Changes to this policy",
             "paragraphs": [
-              "We may update this policy, for example when Sampéa launches. The current version is always the one on this page."
-            ]
-          },
-          {
-            "heading": "Contact",
-            "paragraphs": [
-              "Questions about this policy can be sent to contact@houseofsampea.com."
+              "If we change this policy, the updated version will appear on this page."
             ]
           }
         ],

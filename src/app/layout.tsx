@@ -28,38 +28,54 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: "#F6F0E5" },
-    { media: '(prefers-color-scheme: dark)', color: "#171B28" },
+    { media: '(prefers-color-scheme: light)', color: "#F7F2E8" },
+    { media: '(prefers-color-scheme: dark)', color: "#161C2E" },
   ],
 };
 
 // First-frame ground: html/body take the page background before the CSS
 // bundle arrives, so there is no white flash on dark schemes.
 const FIRST_FRAME_CSS = `
-html, body { background-color: #F6F0E5; }
-@media (prefers-color-scheme: dark) { html:root:not([data-theme="light"]), html:root:not([data-theme="light"]) body { background-color: color-mix(in oklab, #171B28 88%, #000000); } }
-html:root[data-theme="dark"], html:root[data-theme="dark"] body { background-color: color-mix(in oklab, #171B28 88%, #000000); }
+html, body { background-color: #F7F2E8; }
+@media (prefers-color-scheme: dark) { html:root:not([data-theme="light"]), html:root:not([data-theme="light"]) body { background-color: color-mix(in oklab, #161C2E 88%, #000000); } }
+html:root[data-theme="dark"], html:root[data-theme="dark"] body { background-color: color-mix(in oklab, #161C2E 88%, #000000); }
 `;
 
 const FOOTER = {
-  "blurb": "Sampéa is a perfume house that has not launched yet. Every bottle is 30 ml. Every scent is 40% perfume oil.",
+  "blurb": "Sampéa is a perfume house, not yet launched. Launching in India, Canada and the US.",
   "columns": [
     {
-      "heading": "The house",
+      "heading": "Shop",
       "links": [
         {
-          "label": "Home",
-          "href": "/"
+          "label": "Shop",
+          "href": "/shop"
         },
         {
-          "label": "About",
-          "href": "/about"
+          "label": "The Bottle",
+          "href": "/the-bottle"
+        },
+        {
+          "label": "Cart",
+          "href": "/cart"
+        },
+        {
+          "label": "Blog",
+          "href": "/blog"
         }
       ]
     },
     {
-      "heading": "Write to us",
+      "heading": "House",
       "links": [
+        {
+          "label": "About",
+          "href": "/about"
+        },
+        {
+          "label": "FAQ",
+          "href": "/faq"
+        },
         {
           "label": "Contact",
           "href": "/contact"

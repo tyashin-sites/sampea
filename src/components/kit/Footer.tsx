@@ -3,6 +3,7 @@ import { Mail, MapPin, Phone } from 'lucide-react';
 import { siteConfig, FULL_ADDRESS, MAILTO_URL, TEL_URL, PRIMARY_CTA } from '@/config/site';
 import { CtaLink } from './CtaLink';
 import { darkLogo, getBrandKit } from '@/lib/brand-kit';
+import { StoreFooterLinks } from '@/components/store/StoreFooterLinks';
 
 export interface FooterProps {
   blurb: string;
@@ -81,6 +82,9 @@ export async function Footer({ blurb, columns }: FooterProps) {
               </ul>
             </div>
           ))}
+          {siteConfig.commerce?.enabled ? (
+            <StoreFooterLinks blog={siteConfig.commerce.blog} />
+          ) : null}
         </div>
         <div className="rule mt-14" data-fx="draw" aria-hidden />
         <div className="text-paper/60 mt-6 flex flex-col gap-4 text-sm md:flex-row md:items-center md:justify-between">

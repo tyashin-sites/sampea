@@ -8,17 +8,32 @@ const PAGES: { label: string; path: string; description: string }[] = [
   {
     "label": "Home",
     "path": "/",
-    "description": "Sampéa is a perfume house that has not launched yet. Every bottle is 30 ml and every scent is 40% perfume oil. Write to us at contact@houseofsampea.com."
+    "description": "Sampéa is a perfume house that has not launched yet. Every bottle is 30 ml and every scent is 40% perfume oil. Join the launch list in our shop."
+  },
+  {
+    "label": "Shop",
+    "path": "/shop",
+    "description": "Sampéa's first bottle: 30 ml, 40% perfume oil. Prices aren't public yet, so the product page has a launch list where the price will be."
+  },
+  {
+    "label": "The Bottle",
+    "path": "/the-bottle",
+    "description": "Rectangular clear glass on a heavy base, a spray pump, a polished gold crown cap and the gold SAMPÉA wordmark with a lotus. 30 ml in every bottle."
   },
   {
     "label": "About",
     "path": "/about",
-    "description": "Sampéa is a perfume house preparing to launch in India, Canada and the US. One bottle size, 30 ml, and 40% perfume oil in every scent."
+    "description": "Sampéa is a perfume house launching in India, Canada and the US. Every bottle is 30 ml and every scent is 40% perfume oil. Not yet launched."
+  },
+  {
+    "label": "FAQ",
+    "path": "/faq",
+    "description": "Answers about Sampéa before launch: bottle size, perfume oil, where we're launching, and why there are no prices or scent names on the site yet."
   },
   {
     "label": "Contact",
     "path": "/contact",
-    "description": "Write to Sampéa at contact@houseofsampea.com with questions about the house, press enquiries or anything else. Sampéa has not launched yet."
+    "description": "Write to Sampéa at contact@houseofsampea.com. We're a perfume house that hasn't launched yet, launching in India, Canada and the US."
   }
 ];
 

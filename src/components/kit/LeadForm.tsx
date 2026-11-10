@@ -9,6 +9,13 @@ export interface LeadFormProps {
   apiKey: string;
   /** Shown when the form can't take the lead (limit reached, network error). */
   fallback?: string;
+  /**
+   * 'launch-list' (a store that cannot sell yet): name + email only, saved in
+   * the Leads inbox with source 'launch-list' and the product as the message.
+   */
+  variant?: 'enquiry' | 'launch-list';
+  /** What the sign-up is for (the product name), recorded with the lead. */
+  context?: string;
 }
 
 type State = 'idle' | 'sending' | 'sent' | 'error' | 'limit';
@@ -26,7 +33,14 @@ const field =
  * the script runs can never fall back to a native GET that puts the visitor's
  * name and email in the URL. Without env (local dev) the form renders disabled.
  */
-export function LeadForm({ apiUrl, apiKey, fallback }: LeadFormProps) {
+export function LeadForm({
+  apiUrl,
+  apiKey,
+  fallback,
+  variant = 'enquiry',
+  context,
+}: LeadFormProps) {
+  const launch = variant === 'launch-list';
   const renderedAt = useRef(0);
   const sentRef = useRef<HTMLParagraphElement>(null);
   const [ready, setReady] = useState(false);
@@ -55,10 +69,10 @@ export function LeadForm({ apiUrl, apiKey, fallback }: LeadFormProps) {
           _apiKey: apiKey,
           name: get('name'),
           email: get('email'),
-          phone: get('phone') || undefined,
-          message: get('message'),
+          phone: launch ? undefined : get('phone') || undefined,
+          message: launch ? `Launch list${context ? `: ${context}` : ''}` : get('message'),
           pageUrl: window.location.href.slice(0, 500),
-          source: 'contact-form',
+          source: launch ? 'launch-list' : 'contact-form',
           company_website: String(form.get('company_website') ?? ''),
           renderedAt: renderedAt.current,
         }),
@@ -86,7 +100,7 @@ export function LeadForm({ apiUrl, apiKey, fallback }: LeadFormProps) {
         role="status"
         className="bg-surface rounded-lg p-8 font-medium outline-none"
       >
-        Thank you. Your message has been sent.
+        {launch ? 'Thank you. You are on the list.' : 'Thank you. Your message has been sent.'}
       </p>
     );
 
@@ -112,14 +126,18 @@ export function LeadForm({ apiUrl, apiKey, fallback }: LeadFormProps) {
           className={field}
         />
       </label>
-      <label className="grid gap-1.5 text-sm">
-        <span>Phone (optional)</span>
-        <input name="phone" type="tel" maxLength={30} autoComplete="tel" className={field} />
-      </label>
-      <label className="grid gap-1.5 text-sm">
-        <span>Message</span>
-        <textarea name="message" rows={5} maxLength={5000} className={field} />
-      </label>
+      {launch ? null : (
+        <>
+          <label className="grid gap-1.5 text-sm">
+            <span>Phone (optional)</span>
+            <input name="phone" type="tel" maxLength={30} autoComplete="tel" className={field} />
+          </label>
+          <label className="grid gap-1.5 text-sm">
+            <span>Message</span>
+            <textarea name="message" rows={5} maxLength={5000} className={field} />
+          </label>
+        </>
+      )}
       <div aria-hidden="true" className="hidden">
         <label>
           Leave this empty
@@ -131,7 +149,7 @@ export function LeadForm({ apiUrl, apiKey, fallback }: LeadFormProps) {
         disabled={!ready || !configured || state === 'sending'}
         className="btn btn-primary justify-self-start disabled:opacity-60"
       >
-        {state === 'sending' ? 'Sending…' : 'Send message'}
+        {state === 'sending' ? 'Sending…' : launch ? 'Join the launch list' : 'Send message'}
       </button>
       <p role="status" className="text-muted text-sm">
         {!configured && 'The form is available on the live site.'}

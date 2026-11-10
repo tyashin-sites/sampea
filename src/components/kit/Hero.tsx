@@ -94,7 +94,7 @@ export function Hero(props: HeroProps) {
             </div>
             {image ? (
               <div className="reveal lg:col-span-7" style={{ animationDelay: '220ms' }}>
-                <Placeholder image={image} />
+                <Placeholder image={image} priority />
               </div>
             ) : null}
           </div>
@@ -122,7 +122,7 @@ export function Hero(props: HeroProps) {
           </div>
           {image ? (
             <div className="reveal mt-14" style={{ animationDelay: '260ms' }}>
-              <Placeholder image={{ ...image, aspect: 'wide' }} />
+              <Placeholder image={{ ...image, aspect: 'wide' }} priority />
             </div>
           ) : null}
         </div>
@@ -148,7 +148,7 @@ export function Hero(props: HeroProps) {
         </div>
         <div className="reveal lg:col-span-6" style={{ animationDelay: '220ms' }}>
           {image ? (
-            <Placeholder image={image} />
+            <Placeholder image={image} priority />
           ) : (
             <div className="placeholder aspect-[4/3]" aria-hidden />
           )}

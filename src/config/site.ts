@@ -30,8 +30,20 @@ export const siteConfig: SiteConfig = {
   },
   "nav": [
     {
+      "label": "Shop",
+      "href": "/shop"
+    },
+    {
+      "label": "The Bottle",
+      "href": "/the-bottle"
+    },
+    {
       "label": "About",
       "href": "/about"
+    },
+    {
+      "label": "FAQ",
+      "href": "/faq"
     },
     {
       "label": "Contact",
@@ -48,7 +60,11 @@ export const siteConfig: SiteConfig = {
       "href": "/terms"
     }
   ],
-  "socials": []
+  "socials": [],
+  "commerce": {
+    "enabled": true,
+    "blog": true
+  }
 };
 
 const d = derive(siteConfig);

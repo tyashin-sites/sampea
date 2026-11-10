@@ -1,0 +1,620 @@
+{
+  "version": 1,
+  "savedAt": "2026-11-10T01:40:23.773Z",
+  "spec": {
+    "brand": {
+      "name": "Sampéa",
+      "shortName": "Sampéa",
+      "tagline": "",
+      "description": "Sampéa is a perfume house that has not launched yet. Every bottle is 30 ml and every scent is 40% perfume oil. Launching in India, Canada and the US.",
+      "voice": "Quiet, exact and unhurried. Short sentences and plain words. Sampéa says only what it knows: the bottle, 30 ml, 40% perfume oil, not yet launched. It never fills a gap with a claim."
+    },
+    "design": {
+      "thesis": "A sealed letter on cream paper: wide margins, ink-blue type and a single thread of gold, saying very little and meaning all of it.",
+      "palette": {
+        "primary": "#1F2A44",
+        "onPrimary": "#F7F2E8",
+        "accent": "#B08D4A",
+        "background": "#F7F2E8",
+        "foreground": "#2B2E38",
+        "ink": "#161C2E"
+      },
+      "headingFont": "cormorant-garamond",
+      "bodyFont": "manrope",
+      "radius": "sharp",
+      "motion": "subtle"
+    },
+    "pages": [
+      {
+        "path": "/",
+        "label": "Home",
+        "title": "Sampéa | A perfume house, not yet launched",
+        "description": "Sampéa is a perfume house that has not launched yet. Every bottle is 30 ml and every scent is 40% perfume oil. Join the launch list in our shop.",
+        "inNav": false,
+        "sections": [
+          {
+            "type": "hero",
+            "variant": "editorial",
+            "eyebrow": "Sampéa · Not yet launched",
+            "headline": "Every bottle 30 ml. Every scent 40% perfume oil.",
+            "sub": "Sampéa is a perfume house that hasn't launched yet. Our first bottle is in the shop, with a launch list where the price will be.",
+            "primaryCta": {
+              "label": "Join the launch list",
+              "href": "/shop"
+            },
+            "secondaryCta": {
+              "label": "See the bottle",
+              "href": "/the-bottle"
+            },
+            "image": {
+              "alt": "The Sampéa bottle in clear glass with a polished gold crown cap, on a cream ground",
+              "brief": "Customer's own photo of the Sampéa bottle, straight on, on a plain cream ground in soft daylight. Show the whole rectangular clear glass, the heavy base, the gold crown cap and the gold SAMPÉA wordmark with the lotus. No props, no people, no scent colour styling.",
+              "aspect": "portrait",
+              "src": "https://website-api.tyashin.com/api/v1/public/media/media/6af1ee7a2976dd881e839d60/de9c052e5fe49daf61a71522b3b3761958b5d7931cd249c0511198f7304fa76d.jpg",
+              "focus": "right"
+            },
+            "facts": [
+              "30 ml bottle",
+              "40% perfume oil",
+              "Launching in India, Canada and the US"
+            ]
+          },
+          {
+            "type": "stats",
+            "eyebrow": "In every bottle",
+            "headline": "Two things are already settled",
+            "items": [
+              {
+                "value": "30 ml",
+                "label": "In every bottle"
+              },
+              {
+                "value": "40%",
+                "label": "Perfume oil in every scent"
+              }
+            ],
+            "dark": true
+          },
+          {
+            "type": "story",
+            "variant": "stacked",
+            "eyebrow": "The bottle",
+            "headline": "Clear glass, a heavy base, a gold crown",
+            "paragraphs": [
+              "Each bottle is rectangular clear glass on a heavy base, with a spray pump and a polished gold crown cap. It carries the SAMPÉA wordmark in gold, with a lotus."
+            ],
+            "imageSide": "right"
+          },
+          {
+            "type": "cta",
+            "eyebrow": "Not yet launched",
+            "headline": "Be among the first to hear",
+            "body": "Scent names, prices and the launch date aren't public yet. The launch list sits on the product page, where the price will be.",
+            "primaryCta": {
+              "label": "Join the launch list",
+              "href": "/shop"
+            },
+            "secondaryCta": {
+              "label": "Write to us",
+              "href": "mailto:contact@houseofsampea.com"
+            }
+          }
+        ]
+      },
+      {
+        "path": "/shop",
+        "label": "Shop",
+        "title": "Shop",
+        "description": "Sampéa's first bottle: 30 ml, 40% perfume oil. Prices aren't public yet, so the product page has a launch list where the price will be.",
+        "heading": "Shop",
+        "inNav": true,
+        "sections": [
+          {
+            "type": "story",
+            "variant": "stacked",
+            "eyebrow": "Not yet launched",
+            "headline": "One bottle so far",
+            "paragraphs": [
+              "Sampéa hasn't launched, so there's no price yet. Open the product page and join the launch list in its place."
+            ],
+            "imageSide": "right"
+          },
+          {
+            "type": "cta",
+            "eyebrow": "Before launch",
+            "headline": "Something we haven't answered?",
+            "body": "The FAQ covers what we can say today. For anything else, write to us.",
+            "primaryCta": {
+              "label": "Read the FAQ",
+              "href": "/faq"
+            },
+            "secondaryCta": {
+              "label": "Write to us",
+              "href": "mailto:contact@houseofsampea.com"
+            }
+          }
+        ]
+      },
+      {
+        "path": "/the-bottle",
+        "label": "The Bottle",
+        "title": "The Bottle",
+        "description": "Rectangular clear glass on a heavy base, a spray pump, a polished gold crown cap and the gold SAMPÉA wordmark with a lotus. 30 ml in every bottle.",
+        "heading": "The bottle",
+        "inNav": true,
+        "sections": [
+          {
+            "type": "story",
+            "variant": "split",
+            "eyebrow": "The glass",
+            "headline": "Rectangular, clear, on a heavy base",
+            "paragraphs": [
+              "The bottle is a rectangle of clear glass that stands on a heavy base. You'll feel the weight when you lift it."
+            ],
+            "image": {
+              "alt": "The heavy glass base of the Sampéa bottle, shot low and close",
+              "brief": "Customer's own photo of the bottle's base, shot low and close on a cream ground, showing the thickness of the clear glass. Soft side light, no props, no people.",
+              "aspect": "portrait",
+              "src": "https://website-api.tyashin.com/api/v1/public/media/media/6af1ee7a2976dd881e839d60/1ac7a91b91bb235d7d1a4901c14d7884d7f55285cf57327e229b051eec2e6d37.jpg",
+              "focus": "bottom"
+            },
+            "imageSide": "right",
+            "facts": [
+              {
+                "label": "Glass",
+                "value": "Clear, rectangular"
+              },
+              {
+                "label": "Base",
+                "value": "Heavy"
+              }
+            ]
+          },
+          {
+            "type": "story",
+            "variant": "split",
+            "eyebrow": "The cap",
+            "headline": "A spray pump under a gold crown",
+            "paragraphs": [
+              "The cap is a polished gold crown. Beneath it is a spray pump."
+            ],
+            "image": {
+              "alt": "Close view of the polished gold crown cap",
+              "brief": "Customer's own close-up of the polished gold crown cap on the bottle, against cream. Keep the reflections clean and the shot still. No hands.",
+              "aspect": "square"
+            },
+            "imageSide": "left",
+            "facts": [
+              {
+                "label": "Cap",
+                "value": "Polished gold crown"
+              },
+              {
+                "label": "Closure",
+                "value": "Spray pump"
+              }
+            ]
+          },
+          {
+            "type": "story",
+            "variant": "split",
+            "eyebrow": "The mark",
+            "headline": "SAMPÉA in gold, with a lotus",
+            "paragraphs": [
+              "The glass carries the SAMPÉA wordmark in gold, with a lotus.",
+              "Inside, every bottle holds 30 ml, and every scent is 40% perfume oil."
+            ],
+            "image": {
+              "alt": "The gold SAMPÉA wordmark and lotus on the clear glass bottle",
+              "brief": "Customer's own detail photo of the gold SAMPÉA wordmark and lotus on the clear glass, sharp focus on the gold, cream ground behind. No props.",
+              "aspect": "landscape",
+              "src": "https://website-api.tyashin.com/api/v1/public/media/media/6af1ee7a2976dd881e839d60/7f2be30fa1e6a6e40ead38014f10b72df35ba0c5e8ffe57c951d3028c7276873.jpg"
+            },
+            "imageSide": "right",
+            "facts": [
+              {
+                "label": "Volume",
+                "value": "30 ml"
+              },
+              {
+                "label": "Perfume oil",
+                "value": "40%"
+              }
+            ]
+          },
+          {
+            "type": "cta",
+            "eyebrow": "In the shop",
+            "headline": "The bottle is waiting in the shop",
+            "body": "Join the launch list on its product page. That's where the price will go when we open.",
+            "primaryCta": {
+              "label": "Join the launch list",
+              "href": "/shop"
+            },
+            "secondaryCta": {
+              "label": "Read the FAQ",
+              "href": "/faq"
+            }
+          }
+        ]
+      },
+      {
+        "path": "/about",
+        "label": "About",
+        "title": "About",
+        "description": "Sampéa is a perfume house launching in India, Canada and the US. Every bottle is 30 ml and every scent is 40% perfume oil. Not yet launched.",
+        "heading": "About Sampéa",
+        "inNav": true,
+        "sections": [
+          {
+            "type": "story",
+            "variant": "stacked",
+            "eyebrow": "The house",
+            "headline": "A perfume house, not yet launched",
+            "paragraphs": [
+              "Sampéa is a perfume house. We haven't launched, and our scent names, notes, prices and launch date aren't public yet.",
+              "Two things are settled. Every bottle holds 30 ml. Every scent is 40% perfume oil.",
+              "We're launching in India, Canada and the US."
+            ],
+            "imageSide": "right"
+          },
+          {
+            "type": "cta",
+            "eyebrow": "Not yet launched",
+            "headline": "Hear from us first",
+            "body": "Join the launch list on the product page in our shop.",
+            "primaryCta": {
+              "label": "Join the launch list",
+              "href": "/shop"
+            },
+            "secondaryCta": {
+              "label": "See the bottle",
+              "href": "/the-bottle"
+            }
+          }
+        ]
+      },
+      {
+        "path": "/faq",
+        "label": "FAQ",
+        "title": "FAQ",
+        "description": "Answers about Sampéa before launch: bottle size, perfume oil, where we're launching, and why there are no prices or scent names on the site yet.",
+        "heading": "Questions",
+        "inNav": true,
+        "sections": [
+          {
+            "type": "faq",
+            "eyebrow": "Before launch",
+            "headline": "What we can tell you today",
+            "items": [
+              {
+                "q": "Has Sampéa launched?",
+                "a": "Not yet. Sampéa is a perfume house that hasn't launched, and no launch date has been announced."
+              },
+              {
+                "q": "Where will Sampéa launch?",
+                "a": "In India, Canada and the US."
+              },
+              {
+                "q": "How big is a bottle?",
+                "a": "Every bottle is 30 ml."
+              },
+              {
+                "q": "How much perfume oil is in each scent?",
+                "a": "Every scent is 40% perfume oil."
+              },
+              {
+                "q": "What are the scents, and what will they cost?",
+                "a": "Scent names, notes and prices aren't public yet. Join the launch list on the product page to hear when they are."
+              },
+              {
+                "q": "How do I join the launch list?",
+                "a": "Open the bottle's product page in the shop. The launch list sits where the price will be."
+              },
+              {
+                "q": "What does the bottle look like?",
+                "a": "Rectangular clear glass with a heavy base, a spray pump, a polished gold crown cap and the gold SAMPÉA wordmark with a lotus."
+              },
+              {
+                "q": "How can I reach you?",
+                "a": "Write to contact@houseofsampea.com."
+              }
+            ]
+          },
+          {
+            "type": "cta",
+            "eyebrow": "Not yet launched",
+            "headline": "Join the launch list",
+            "body": "It's on the product page in our shop.",
+            "primaryCta": {
+              "label": "Go to the shop",
+              "href": "/shop"
+            },
+            "secondaryCta": {
+              "label": "Write to us",
+              "href": "mailto:contact@houseofsampea.com"
+            }
+          }
+        ]
+      },
+      {
+        "path": "/contact",
+        "label": "Contact",
+        "title": "Contact",
+        "description": "Write to Sampéa at contact@houseofsampea.com. We're a perfume house that hasn't launched yet, launching in India, Canada and the US.",
+        "heading": "Contact",
+        "inNav": true,
+        "sections": [
+          {
+            "type": "contact",
+            "eyebrow": "Contact",
+            "headline": "Write to Sampéa",
+            "body": "Our address is contact@houseofsampea.com. To hear when we launch, join the list on the product page."
+          },
+          {
+            "type": "cta",
+            "eyebrow": "Not yet launched",
+            "headline": "Hear when we launch",
+            "body": "The launch list is on the product page, where the price will be.",
+            "primaryCta": {
+              "label": "Join the launch list",
+              "href": "/shop"
+            },
+            "secondaryCta": {
+              "label": "Read the FAQ",
+              "href": "/faq"
+            }
+          }
+        ]
+      },
+      {
+        "path": "/privacy",
+        "label": "Privacy",
+        "title": "Privacy Policy",
+        "description": "How Sampéa handles the personal details you share on this site, including your email address when you join the launch list or write to us.",
+        "heading": "Privacy policy",
+        "inNav": false,
+        "sections": [
+          {
+            "type": "prose",
+            "eyebrow": "Legal",
+            "headline": "Privacy policy",
+            "intro": "This policy explains how Sampéa uses the personal details you give us through this website.",
+            "blocks": [
+              {
+                "heading": "What we collect",
+                "paragraphs": [
+                  "We collect only what you choose to give us: your email address when you join the launch list, what you include when you write to contact@houseofsampea.com, and the details needed to complete an order once we start selling."
+                ]
+              },
+              {
+                "heading": "How we use it",
+                "paragraphs": [
+                  "We use your email address to tell you about Sampéa's launch and to reply when you write to us. We use order details to process, deliver and support your order. We don't sell your personal details."
+                ]
+              },
+              {
+                "heading": "Who else handles it",
+                "paragraphs": [
+                  "This website and shop run on the Tyashin platform, which stores this information on our behalf. Payment details at checkout are handled by the payment provider, not kept by us."
+                ]
+              },
+              {
+                "heading": "Your choices",
+                "paragraphs": [
+                  "You can ask to see, correct or delete the details we hold about you, or leave the launch list, by writing to contact@houseofsampea.com."
+                ]
+              },
+              {
+                "heading": "Changes to this policy",
+                "paragraphs": [
+                  "If we change this policy, the updated version will appear on this page."
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "path": "/terms",
+        "label": "Terms",
+        "title": "Terms of Use",
+        "description": "The terms for using the Sampéa website and shop, including the launch list, product information before launch, and how to contact us.",
+        "heading": "Terms of use",
+        "inNav": false,
+        "sections": [
+          {
+            "type": "prose",
+            "eyebrow": "Legal",
+            "headline": "Terms of use",
+            "intro": "These terms apply when you use the Sampéa website and shop. By using the site, you agree to them.",
+            "blocks": [
+              {
+                "heading": "Before launch",
+                "paragraphs": [
+                  "Sampéa has not launched. Products shown on this site can't be bought yet, and scent names, notes, prices and the launch date aren't public. Joining the launch list doesn't reserve a product or commit you to buying one."
+                ]
+              },
+              {
+                "heading": "Orders",
+                "paragraphs": [
+                  "When sales open, prices and order terms will be shown in the shop and at checkout before you pay."
+                ]
+              },
+              {
+                "heading": "Our content",
+                "paragraphs": [
+                  "The text, images, the SAMPÉA wordmark and the lotus on this site belong to Sampéa. Please don't copy or reuse them without our permission."
+                ]
+              },
+              {
+                "heading": "Changes",
+                "paragraphs": [
+                  "We may update these terms. The current version is always the one on this page."
+                ]
+              },
+              {
+                "heading": "Contact",
+                "paragraphs": [
+                  "Questions about these terms can be sent to contact@houseofsampea.com."
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "footer": {
+      "blurb": "Sampéa is a perfume house, not yet launched. Launching in India, Canada and the US.",
+      "columns": [
+        {
+          "heading": "Shop",
+          "links": [
+            {
+              "label": "Shop",
+              "href": "/shop"
+            },
+            {
+              "label": "The Bottle",
+              "href": "/the-bottle"
+            },
+            {
+              "label": "Cart",
+              "href": "/cart"
+            },
+            {
+              "label": "Blog",
+              "href": "/blog"
+            }
+          ]
+        },
+        {
+          "heading": "House",
+          "links": [
+            {
+              "label": "About",
+              "href": "/about"
+            },
+            {
+              "label": "FAQ",
+              "href": "/faq"
+            },
+            {
+              "label": "Contact",
+              "href": "/contact"
+            }
+          ]
+        }
+      ]
+    },
+    "assetDebt": [
+      {
+        "item": "Photo of the bottle from the front on a plain cream ground (full bottle, gold crown cap and wordmark visible, no props or people)",
+        "neededFor": "Home hero image"
+      },
+      {
+        "item": "Low, close photo of the bottle's heavy glass base",
+        "neededFor": "The Bottle page, 'The glass' section"
+      },
+      {
+        "item": "Close-up of the polished gold crown cap",
+        "neededFor": "The Bottle page, 'The cap' section"
+      },
+      {
+        "item": "Detail photo of the gold SAMPÉA wordmark and lotus on the glass",
+        "neededFor": "The Bottle page, 'The mark' section"
+      },
+      {
+        "item": "Review of the privacy policy and terms of use by the business (including governing jurisdiction and the payment provider used at checkout)",
+        "neededFor": "/privacy and /terms before go-live"
+      }
+    ],
+    "seoKeywords": [
+      "Sampéa",
+      "Sampéa perfume",
+      "House of Sampéa",
+      "perfume house",
+      "40% perfume oil",
+      "30 ml perfume",
+      "new perfume launch India",
+      "new perfume launch Canada",
+      "new perfume launch US",
+      "perfume launch list"
+    ]
+  },
+  "files": {
+    "postcss.config.mjs": "f50058e0d309cdb3e7c25a1123337338641fb71e988572607d57f47209db1fd1",
+    "src/app/error.tsx": "71c9645674f2b0e9c695e67f3eacbf2f2c4840fa63bc80dfa268a3866a92bcec",
+    "src/app/not-found.tsx": "d034f53c335963b71417416d4c64327524b6dac1e1c8aa8cdb7c0b2426ad9532",
+    "src/app/robots.txt/route.ts": "5a3fd6dc87c7cada4ed30edfb521fbba60f96e40cbfe1488556a4f740067d92a",
+    "src/app/sitemap-pages.xml/route.ts": "a150086a399d74f4595bd5acc97edea1d8310ea1b848f7a1915e209c9e8e393d",
+    "src/components/kit/BrandKitStyle.tsx": "ae9f79969ccc1689387147c9b287b196475a146ee9837f73de72613d280de0ea",
+    "src/components/kit/BrandMark.tsx": "af7feb7660b2f383d898bde31d0a4555e27f82f17afe8940bcf8a75b8717a6ca",
+    "src/components/kit/Breadcrumbs.tsx": "6b560601620f5fbd60332a1d04c2cfc596cd8acf3217e2d00171f65c0d25abd3",
+    "src/components/kit/Contact.tsx": "d7c8e81153ec2c4a2f37b67221e167262a563439fa45f94867ea53b2e36a9ab2",
+    "src/components/kit/CtaBand.tsx": "ecd895c502f058f13c5d43ea2cfd034c5c40f58a8b5127c1e222c4e5fef76bbc",
+    "src/components/kit/CtaLink.tsx": "ad56fece41add361c162756871924957ef3987dcae4d56f91ca78f7223455731",
+    "src/components/kit/Faq.tsx": "8b0b6e19fe25cad188cde40932c43d604a1b7b5e5ae37b5b58b827888833d4b7",
+    "src/components/kit/Features.tsx": "de1988600dbaed526df16a250623cef7678cb347d4baf1d72153834164569224",
+    "src/components/kit/Footer.tsx": "97d57189ec3a1dcd6d31a9d6e9093a16d91658002bdd4e6c3b9583b22eae6710",
+    "src/components/kit/Gallery.tsx": "693b9b04f17b31a87c26045b9e358a07729ac2b07b83a7f80613945ab3bb0eb2",
+    "src/components/kit/Header.tsx": "fdbaa72370b4d11c661c7342423ff71881d2dc29c10d69a1cbb98f19ae99c722",
+    "src/components/kit/Hero.tsx": "f6ea9365887490d8b23c0d4bc2b2323a4e106203c3a0c2575f5c376fdf3497e7",
+    "src/components/kit/Icon.tsx": "d72a89ba10c96a429926f25b3077450e0a141bf1e051c2bc19b4d79178305549",
+    "src/components/kit/JsonLd.tsx": "7135116c53cbb0a3e39a1161f50af4fa269c1e32ebdcde60bda5cedbb235c075",
+    "src/components/kit/LeadForm.tsx": "8a86eddd1afaec716661ff14bc62b37ed2c3d80569b91fcd1fac5acfc737d784",
+    "src/components/kit/MobileNav.tsx": "0f959f475b01bc07243af0b7dec0c86d9bae2777fc99dbb738e2c59af31ef293",
+    "src/components/kit/Placeholder.tsx": "813545081fefa99fee255d6438d9d8219945794b581078d6d227c3e5ea1280b0",
+    "src/components/kit/Prose.tsx": "925e590400df48c9b155faa3cf9d5f610bfa755b9677f2a2730f6e39725490be",
+    "src/components/kit/Reveal.tsx": "e53dd820e734f6763fc6352ed7e51c406de0a5ef598b9c4a95a8ee967de11168",
+    "src/components/kit/SectionHeading.tsx": "691ccc9293737ce0b230e75f79ba96a3766bd991cb34023e8d14710ff93f7c77",
+    "src/components/kit/Stats.tsx": "9071f61ffc91ee753afb378ff67d3b32edfa18900ddb8b94a928ba18d1ce13f5",
+    "src/components/kit/Story.tsx": "a37c2690bc7dfac145c83fc12121c26cf80cf98ad9718e245321505674a33a69",
+    "src/components/kit/Testimonials.tsx": "d854a6f04ceb42f38d67a6fe0bef6c2725f0875810b63c668c7f85e80b151842",
+    "src/components/kit/index.ts": "92a2461accab436dd2da2e97e8e54641dc996a7f5db4ac9d9a7b1e609e8c36cd",
+    "src/components/store/AddToCart.tsx": "6e21851a3ebf4dda83d2730d5510cef5d809d72873311301c2537a234479dfca",
+    "src/components/store/BuyBox.tsx": "510d1e56a2bf2ef15971897b91cb2876126d3468c24d5d13f9c42b47961de008",
+    "src/components/store/CartLink.tsx": "32e6063cd2c16d268425a843da72d00ad986b5c4e7dc3636c93add897e2af2cf",
+    "src/components/store/CartView.tsx": "593d19658ad7fd67cd37abf8f0ea4b7f02448990435daf0daafafdacccca10ea",
+    "src/components/store/CategoryNav.tsx": "4f61dff49ffbf82376a562d0e8d77584e58fe85b881f0ff37045645bddec48a1",
+    "src/components/store/LaunchList.tsx": "540d1b6da0a6fdf23a1a2c4e1e8533b015ae1308b124608fbd96087cc01339ba",
+    "src/components/store/ProductCard.tsx": "bdc1564cc1c0af87dbbb9545e47358369c372d76881cf1dd9c6dc4b30b47a14d",
+    "src/components/store/ProductGallery.tsx": "9b3fcaa76879ec87add8cadea5b9a80af533e650e0cbe71722eab86179ab9b78",
+    "src/components/store/ProductGrid.tsx": "e4576988c932bb6de32d9b080a402b65d1ac4427b20497d0bff4eb9c00fe835b",
+    "src/components/store/RelatedProducts.tsx": "ce99b0ebfbace72015a174adf3af572b2abc8e86a50b3ab16898cb8a6909c831",
+    "src/components/store/Reviews.tsx": "9d8e3e1e31494dbcad02ecd635fe637e0f04ececdbe530855da5dbc2a12de369",
+    "src/components/store/StoreFooterLinks.tsx": "b1fc94a4445d4ddc43d0d22632e7c0ec7f8d1c2c0311a819c6ef6388b8575bb8",
+    "src/components/store/index.ts": "6fb551859b4e55e9a1ec8332c29c80792dfb2326db8936667afeb2a9036eaa67",
+    "src/lib/brand-kit-css.ts": "2287a72c0a74e4beef4f700da40cd31fddeefb9d7d81afb3f919dfa18ec6a0ec",
+    "src/lib/brand-kit.ts": "1312bd4dac49450291664eec1917620a36c87bb13a9c67eb204df7c2e461c996",
+    "src/lib/cart-client.ts": "6a98138c318e889916722d1a37e8669317a9048d76ed6b82d0a958d5aa5bef10",
+    "src/lib/commerce.ts": "3d6cbcde72e90a90d1a6f7890ae5ad601036bd9182e709cf1f5f706db9f51f29",
+    "src/lib/schema.ts": "26869ce10f33779604a9f833e8dfe290fee8d933dc3c6356f4bd113b072d530a",
+    "src/lib/seo.ts": "1caee48b18a251354127f4a6977be6fcca51f30b51f91e7c66689d9eb143069b",
+    "src/lib/site-config.ts": "059323541b3f9ff11946f53d27c337302614087a8bb6fd489db27212bd3f82fe",
+    "src/lib/utils.ts": "9304a861c8673bee09e0f12de31773abbde503b02e59dfd74763ddec2e37cf05",
+    "src/middleware.ts": "8cf5a1c11e1d127c8b4b5ad52f3e7d4f1e43eb2f641d5728346c860f8d09186a",
+    "tailwind.config.ts": "602d44f352dc503e122bfee252d1bbd981572c32b433e386c7875138d465ae91",
+    "src/config/site.ts": "b2b429f0186161ad5a3679dff4062e143ebe2c3b3dc6c27192b4e4c593e7d5ba",
+    "src/app/globals.css": "7e8d2b23a34d5623747edb3c5d4481ffb30acce4d130ad249f5ad98b5d170527",
+    "src/lib/fonts.ts": "168e57bddb9aded9f550a3d0ea8fa0f5b6fce3e04e3eb53550dcb822ba56a39d",
+    "src/app/layout.tsx": "bae21221acf78deb35047454ed6c6f794484837d08ae58f114524ece8514459b",
+    "next.config.ts": "e67a4bc0e18777c8c1e72e02e9d61c70da338d52f428a2d0837939e5ece86685",
+    "src/lib/site-routes.ts": "438742315fb24cae9eb7e57ddc017a4abfff023fbb8333260cbfc005a1da029c",
+    "src/app/llms.txt/route.ts": "2dea6d7644cf8034186942c5afc97d8921f714d708e4bcdd6ce12bc645b3f21b",
+    "src/app/icon.svg": "1ae53e5476ccaa9d74f0eec6bbe76b7096d6efaf2a06bc9d8ec3b3d9162c040d",
+    "docs/DESIGN-SPEC.md": "49f1d3d5452c775ea117abf79dd83dcdc14697c330d2b091e04edb0651d09476",
+    "docs/ASSET-DEBT.md": "bc75d345b449750bc548ac1ea9da32d0929ad592b0e173035b7321962e2dc95f",
+    "src/app/shop/[category]/page.tsx": "29607c35c84d36c803d7af6bae3bf8cf8d54d8c865f5f525f4ab51bc58997a44",
+    "src/app/products/[slug]/page.tsx": "835971de0fee990e91e1a4604ae9e7bfedd6a2e73d363f0983acda134ecc293c",
+    "src/app/cart/page.tsx": "3497525229cd756b4535cf96dd326c72ebd2844ad7bcc9e75a9359770e8989e2",
+    "src/app/page.tsx": "6d754d9facc7cc6de6a8854eaab20c1cf107823ad745a3f1a8f6a757be9ddc2f",
+    "src/app/shop/page.tsx": "e56d7bf849ec059654051cf2cae3183941c480b96f329b2202f995aaba160938",
+    "src/app/the-bottle/page.tsx": "613bc5aeb30e4d3957bbe265a5e705628d4a4de334875628bbe1403fb0c30acf",
+    "src/app/about/page.tsx": "94843486238336c3cd175a1973c21ac20dc0fae363d5b74715a0d6b1e07f74a6",
+    "src/app/faq/page.tsx": "20eb33d6d9d64d582135502b59cee1e0888ba4c35c3940a68f429349c6097af3",
+    "src/app/contact/page.tsx": "e0f79f5f6cf28e09f4b33853692bd4fc47e2a4dddee1244f3e916558ac77ecde",
+    "src/app/privacy/page.tsx": "6bb00bdc35dd8f6f2813413beb5f089136a026eec97d065daf98b30e69730b2b",
+    "src/app/terms/page.tsx": "275b1a1559f9b72905f85287871fd6c2897180f9554160f86e9cc7198dc084df"
+  }
+}

@@ -20,11 +20,6 @@ export function siteUrl(path = '/'): string {
 
 export type PageMeta = {
   title: string;
-  /**
-   * Use `title` verbatim in the tab, without the root layout's "| <site name>"
-   * suffix. For titles that already name the business.
-   */
-  exactTitle?: boolean;
   description: string;
   path: string;
   image?: string;
@@ -37,7 +32,7 @@ export function pageMetadata(opts: PageMeta): Metadata {
   const url = siteUrl(opts.path);
   const image = opts.image || SITE.defaultOgImage;
   return {
-    title: opts.exactTitle ? { absolute: opts.title } : opts.title,
+    title: opts.title,
     description: opts.description,
     ...(opts.keywords ? { keywords: opts.keywords } : {}),
     alternates: { canonical: opts.path },

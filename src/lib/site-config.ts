@@ -33,6 +33,11 @@ export interface SiteConfig {
   nav: NavItem[];
   legalNav: NavItem[];
   socials: { label: string; href: string }[];
+  /**
+   * Set on sites built as an online store: the header shows the cart and the
+   * footer adds live categories (and recent posts when the blog is on).
+   */
+  commerce?: { enabled: boolean; blog: boolean };
 }
 
 export interface Cta {
