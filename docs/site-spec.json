@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "savedAt": "2026-11-10T08:58:45.234Z",
+  "savedAt": "2026-11-10T09:07:29.183Z",
   "spec": {
     "brand": {
       "name": "Sampéa",
@@ -294,7 +294,7 @@
               },
               {
                 "q": "When can I order?",
-                "a": "Dates and prices aren't public yet. Join the list on any scent's page in the shop to hear first, or write to contact@houseofsampea.com."
+                "a": "Join a scent's list in the shop to hear from the house first, or write to contact@houseofsampea.com."
               },
               {
                 "q": "How do I reach Sampéa?",
@@ -587,7 +587,7 @@
     "src/lib/site-routes.ts": "438742315fb24cae9eb7e57ddc017a4abfff023fbb8333260cbfc005a1da029c",
     "src/app/llms.txt/route.ts": "acfd964d2491888bc2d4a19e1fb0453940842ff8e322caad61ffaee84405f0be",
     "src/app/icon.svg": "80c3f7e646245981c596993c161bd32191ce15cc268992e48b07c102f57f429e",
-    "docs/DESIGN-SPEC.md": "45f77c54586ab0acaf0cee5db49f61bcb65dccd320e57073d8f482566ec4b280",
+    "docs/DESIGN-SPEC.md": "ab5e32d54e275eef55b0b238121820d08c521935fd6cce778ab633c68c212237",
     "docs/ASSET-DEBT.md": "24e7c55d9160870392770160a707a07c16ba8f1c38246ad538e3cb39b686b9cd",
     "src/app/shop/[category]/page.tsx": "29607c35c84d36c803d7af6bae3bf8cf8d54d8c865f5f525f4ab51bc58997a44",
     "src/app/products/[slug]/page.tsx": "835971de0fee990e91e1a4604ae9e7bfedd6a2e73d363f0983acda134ecc293c",
@@ -596,7 +596,7 @@
     "src/app/shop/page.tsx": "91944aa9353022f3c015192065da89ccd329f64ac46f8d63b63d03bd3e97b0be",
     "src/app/the-bottle/page.tsx": "dfe9dc27521ac2941c34f27bd25d915939772cc2c9d0aed3d55c814dfbd4a2eb",
     "src/app/about/page.tsx": "701c8c745ea3196bba3f78314ee856b632592fa268087f78f3d33d424f4cd2c3",
-    "src/app/faq/page.tsx": "65a56c32be1c5614f4d0e49b1f3d94e1380fc4dc569ec37d98f0627c13ff7d01",
+    "src/app/faq/page.tsx": "07530f175b2f57f196a8d3c54d07e437737e97c35d63e82ae7233b9d54f85f43",
     "src/app/contact/page.tsx": "1b394b6aa4007e274adfd5930170a70f40a1c1f70eef2076ec9b92bf7692ec84",
     "src/app/privacy/page.tsx": "9cc32b22a9717975da5f777180e57eedf3bba51d08620204e9e89b6e3be21c98",
     "src/app/terms/page.tsx": "feb4386291f3e3e720a69cc3c119804d3d195aa392fa77d7839eb402b3546855"

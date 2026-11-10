@@ -14,7 +14,7 @@ const CRUMBS = [{"name":"Home","path":"/"},{"name":"FAQ","path":"/faq"}];
 export default function Page() {
   return (
     <>
-      <JsonLd nodes={[organizationLd("Store"), websiteLd(), faqLd([{"q":"How much does a bottle hold?","a":"Every Sampéa bottle holds 30 ml."},{"q":"What concentration is each scent?","a":"Every scent is 40% perfume oil."},{"q":"Why do all the bottles look the same?","a":"Sampéa uses one bottle across the whole house: the gold SAMPÉA wordmark and the lotus, with a gold cap. The scents are told apart by name, not by bottle."},{"q":"Where is Sampéa available?","a":"Canada and the US."},{"q":"What is Le Cercle Sampéa?","a":"The circle of people who wear Sampéa."},{"q":"When can I order?","a":"Dates and prices aren't public yet. Join the list on any scent's page in the shop to hear first, or write to contact@houseofsampea.com."},{"q":"How do I reach Sampéa?","a":"By email, at contact@houseofsampea.com."}]), breadcrumbLd(CRUMBS)]} />
+      <JsonLd nodes={[organizationLd("Store"), websiteLd(), faqLd([{"q":"How much does a bottle hold?","a":"Every Sampéa bottle holds 30 ml."},{"q":"What concentration is each scent?","a":"Every scent is 40% perfume oil."},{"q":"Why do all the bottles look the same?","a":"Sampéa uses one bottle across the whole house: the gold SAMPÉA wordmark and the lotus, with a gold cap. The scents are told apart by name, not by bottle."},{"q":"Where is Sampéa available?","a":"Canada and the US."},{"q":"What is Le Cercle Sampéa?","a":"The circle of people who wear Sampéa."},{"q":"When can I order?","a":"Join a scent's list in the shop to hear from the house first, or write to contact@houseofsampea.com."},{"q":"How do I reach Sampéa?","a":"By email, at contact@houseofsampea.com."}]), breadcrumbLd(CRUMBS)]} />
       <Breadcrumbs items={CRUMBS} />
       <section className="section pb-0">
         <div className="container-x max-w-3xl">
@@ -45,7 +45,7 @@ export default function Page() {
           },
           {
             "q": "When can I order?",
-            "a": "Dates and prices aren't public yet. Join the list on any scent's page in the shop to hear first, or write to contact@houseofsampea.com."
+            "a": "Join a scent's list in the shop to hear from the house first, or write to contact@houseofsampea.com."
           },
           {
             "q": "How do I reach Sampéa?",
